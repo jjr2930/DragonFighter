@@ -28,20 +28,20 @@ public class PCInput : MonoBehaviour {
         }
         #endregion
 
-        #region Down Arrow
+        #region Back Arrow
         if(Input.GetKeyUp(m_config.BACK_KEY))
         {
-            JEventSystem.EnqueueEvent(E_VirtualKey.Down_UP,null);
+            JEventSystem.EnqueueEvent(E_VirtualKey.Back_UP,null);
         }
 
         if(Input.GetKey(m_config.BACK_KEY))
         {
-            JEventSystem.EnqueueEvent(E_VirtualKey.Down,null);
+            JEventSystem.EnqueueEvent(E_VirtualKey.Back,null);
         }
 
         if(Input.GetKeyDown(m_config.BACK_KEY))
         {
-            JEventSystem.EnqueueEvent(E_VirtualKey.Down_Down,null);
+            JEventSystem.EnqueueEvent(E_VirtualKey.Back_Down,null);
         }
         #endregion
 

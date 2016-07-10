@@ -15,6 +15,14 @@ public class IngameManager : MonoSingle<IngameManager> {
         }
 
         m_eventContainer = this.gameObject.AddComponent<JEventSystem>();
+
+        GameObject goPlayer     = GameObject.FindWithTag(Configure.Instance.TAG_PLAYER);
+        JAnimatorController JAC = goPlayer.GetComponent<JAnimatorController>();
+
+        if (null == JAC)
+        {
+            goPlayer.AddComponent<JAnimatorController>();
+        }
 	}
 	
 }
