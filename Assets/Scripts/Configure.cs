@@ -27,7 +27,7 @@ public class Configure : MonoSingle<Configure>
     public float PLAYER_BACK_ACCEL = 1f;
     
     public float PLAYER_FWDSPEED_LIMIT = 1f;
-    public float PLAYER_BACKSPEED_LIMIT = 1f;
+    public float PLAYER_BACKSPEED_LIMIT = -1f;
     public float PLAYER_STRAFE_LIMIT = 1f;
 
     public float PLAYER_STRAFE_ACCEL = 0.5f;
