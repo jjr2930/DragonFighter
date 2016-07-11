@@ -46,3 +46,11 @@ public enum E_AnimEvent : int
     Max,
 
 }
+
+public enum E_EtcEvent : int
+{
+    DiffultUp = 0,
+    UserDied,
+    Max
+    
+}
