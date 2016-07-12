@@ -215,6 +215,12 @@ public class JAnimatorController : MonoBehaviour {
     }
 
     #endregion
+
+    public void CreateAttackEvent()
+    {
+        Debug.Log("CreateAttackEvent called");
+        JEventSystem.EnqueueEvent(E_AnimEvent.UserAttack,null);
+    }
 }
 
 
