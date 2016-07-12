@@ -42,6 +42,8 @@ public enum E_AnimEvent : int
 {
     Idle = 0,
     Walk,
+    UserAttack,
+    EnemyAttack,
     Run,
     Max,
 

@@ -34,7 +34,7 @@ public class JAnimatorController : MonoBehaviour {
 
 
         JEventSystem.AddObserver(E_VirtualKey.ButtonA_Down, ProcessBtnADown);
-        JEventSystem.AddObserver(E_VirtualKey.ButtonB_Down, ProcessBtnADown);
+        JEventSystem.AddObserver(E_VirtualKey.ButtonB_Down, ProcessBtnBDown);
     }
 
     #region Direction
@@ -45,6 +45,8 @@ public class JAnimatorController : MonoBehaviour {
             StopCoroutine(m_Fwditer);
             m_Fwditer = null;
         }
+
+        m_animator.applyRootMotion = false;
 
         m_fCurSpeed += Configure.Instance.ANIM_FWD_ACCEL * Time.deltaTime;
         m_fCurSpeed = Mathf.Clamp(m_fCurSpeed, 0, Configure.Instance.ANIM_FWDSPEED_LIMIT);
@@ -61,6 +63,8 @@ public class JAnimatorController : MonoBehaviour {
             m_Fwditer = null;
         }
 
+        m_animator.applyRootMotion = false;
+
         m_fCurSpeed -= Configure.Instance.ANIM_BACK_ACCEL * Time.deltaTime;
         m_fCurSpeed = Mathf.Clamp(m_fCurSpeed, Configure.Instance.ANIM_BACKSPEED_LIMIT, 0f);
 
@@ -74,6 +78,8 @@ public class JAnimatorController : MonoBehaviour {
             StopCoroutine(m_Strafeiter);
             m_Strafeiter = null;
         }
+
+        m_animator.applyRootMotion = false;
 
         m_fCurStrafe += Configure.Instance.ANIM_STRAFE_ACCEL * Time.deltaTime;
         m_fCurStrafe = Mathf.Clamp(m_fCurStrafe, 0f, Configure.Instance.ANIM_STRAFE_LIMIT);
@@ -89,6 +95,8 @@ public class JAnimatorController : MonoBehaviour {
             m_Strafeiter = null;
         }
 
+        m_animator.applyRootMotion = false;
+
         m_fCurStrafe += Configure.Instance.ANIM_STRAFE_ACCEL * Time.deltaTime;
         m_fCurStrafe = Mathf.Clamp(m_fCurStrafe, 0f, Configure.Instance.ANIM_STRAFE_LIMIT);
 
@@ -102,6 +110,8 @@ public class JAnimatorController : MonoBehaviour {
             StopCoroutine(m_Fwditer);
             m_Fwditer = null;
         }
+
+
 
         m_Fwditer = StopFwdRoutine();
         StartCoroutine(m_Fwditer);
@@ -187,19 +197,21 @@ public class JAnimatorController : MonoBehaviour {
     public void ProcessBtnADown(GameObject go)
     {
         ResetAllCombatTrigger();
+        m_animator.applyRootMotion = true;
         m_animator.SetTrigger(Configure.Instance.ANIM_BtnA);
     }
 
     public void ProcessBtnBDown(GameObject go)
     {
         ResetAllCombatTrigger();
+        m_animator.applyRootMotion = true;
         m_animator.SetTrigger(Configure.Instance.ANIM_BtnB);
     }
     
     public void ResetAllCombatTrigger()
     {
-        m_animator.SetTrigger(Configure.Instance.ANIM_BtnA);
-        m_animator.SetTrigger(Configure.Instance.ANIM_BtnB);
+        m_animator.ResetTrigger(Configure.Instance.ANIM_BtnA);
+        m_animator.ResetTrigger(Configure.Instance.ANIM_BtnB);
     }
 
     #endregion

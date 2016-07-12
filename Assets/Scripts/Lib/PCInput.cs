@@ -81,15 +81,15 @@ public class PCInput : MonoBehaviour {
 
         #region A Button
 
-        if( Input.GetKeyUp( m_config.KEY_A) )
-        {
-            JEventSystem.EnqueueEvent( E_VirtualKey.ButtonA_Up, null );
-        }
+        //if( Input.GetKeyUp( m_config.KEY_A) )
+        //{
+        //    JEventSystem.EnqueueEvent( E_VirtualKey.ButtonA_Up, null );
+        //}
 
-        if( Input.GetKey( m_config.KEY_A) )
-        {
-            JEventSystem.EnqueueEvent( E_VirtualKey.ButtonA, null );
-        }
+        //if( Input.GetKey( m_config.KEY_A) )
+        //{
+        //    JEventSystem.EnqueueEvent( E_VirtualKey.ButtonA, null );
+        //}
 
         if( Input.GetKeyDown( m_config.KEY_A ) )
         {
@@ -99,15 +99,15 @@ public class PCInput : MonoBehaviour {
         #endregion
 
         #region B Button
-          if( Input.GetKeyUp( m_config.KEY_B) )
-        {
-            JEventSystem.EnqueueEvent( E_VirtualKey.ButtonB_Up, null );
-        }
+        //if( Input.GetKeyUp( m_config.KEY_B) )
+        //{
+        //    JEventSystem.EnqueueEvent( E_VirtualKey.ButtonB_Up, null );
+        //}
 
-        if( Input.GetKey( m_config.KEY_B) )
-        {
-            JEventSystem.EnqueueEvent( E_VirtualKey.ButtonB, null );
-        }
+        //if( Input.GetKey( m_config.KEY_B) )
+        //{
+        //    JEventSystem.EnqueueEvent( E_VirtualKey.ButtonB, null );
+        //}
 
         if( Input.GetKeyDown( m_config.KEY_B ) )
         {

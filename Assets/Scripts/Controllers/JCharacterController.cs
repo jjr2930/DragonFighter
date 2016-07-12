@@ -26,8 +26,8 @@ public class JCharacterController : MonoBehaviour {
         JEventSystem.AddObserver(E_VirtualKey.Left_UP, GetKeyUpLeft);
         JEventSystem.AddObserver(E_VirtualKey.Right_UP, GetKeyUpRight);
 
-        JEventSystem.AddObserver(E_VirtualKey.ButtonA_Down, GetKeyDownA);
-        JEventSystem.AddObserver(E_VirtualKey.ButtonB_Down, GetKeyDownB);
+        //JEventSystem.AddObserver(E_VirtualKey.ButtonA_Down, GetKeyDownA);
+        //JEventSystem.AddObserver(E_VirtualKey.ButtonB_Down, GetKeyDownB);
     }
     #region Locomotion
     #region key press
