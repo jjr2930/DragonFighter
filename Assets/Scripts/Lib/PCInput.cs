@@ -14,68 +14,68 @@ public class PCInput : MonoBehaviour {
         #region Up Arrow
         if(Input.GetKeyUp(m_config.FWD_KEY))
         {
-            JEventSystem.EnqueueEvent(E_VirtualKey.Forward_UP,null);
+            JEventSystem.EnqueueEvent(E_VirtualKey.Forward_UP);
         }
 
         if(Input.GetKey(m_config.FWD_KEY))
         {
-            JEventSystem.EnqueueEvent(E_VirtualKey.Forward,null);
+            JEventSystem.EnqueueEvent(E_VirtualKey.Forward);
         }
 
         if(Input.GetKeyDown(m_config.FWD_KEY))
         {
-            JEventSystem.EnqueueEvent(E_VirtualKey.Forward_Down,null);
+            JEventSystem.EnqueueEvent(E_VirtualKey.Forward_Down);
         }
         #endregion
 
         #region Back Arrow
         if(Input.GetKeyUp(m_config.BACK_KEY))
         {
-            JEventSystem.EnqueueEvent(E_VirtualKey.Back_UP,null);
+            JEventSystem.EnqueueEvent(E_VirtualKey.Back_UP);
         }
 
         if(Input.GetKey(m_config.BACK_KEY))
         {
-            JEventSystem.EnqueueEvent(E_VirtualKey.Back,null);
+            JEventSystem.EnqueueEvent(E_VirtualKey.Back);
         }
 
         if(Input.GetKeyDown(m_config.BACK_KEY))
         {
-            JEventSystem.EnqueueEvent(E_VirtualKey.Back_Down,null);
+            JEventSystem.EnqueueEvent(E_VirtualKey.Back_Down);
         }
         #endregion
 
         #region Left Arrow
         if( Input.GetKeyUp(m_config.LEFT_KEY))
         {
-            JEventSystem.EnqueueEvent(E_VirtualKey.Left_UP,null);
+            JEventSystem.EnqueueEvent(E_VirtualKey.Left_UP);
         }
 
         if(Input.GetKey(m_config.LEFT_KEY))
         {
-            JEventSystem.EnqueueEvent(E_VirtualKey.Left,null);
+            JEventSystem.EnqueueEvent(E_VirtualKey.Left);
         }
 
         if(Input.GetKeyDown(m_config.LEFT_KEY))
         {
-            JEventSystem.EnqueueEvent(E_VirtualKey.Left_Down,null);
+            JEventSystem.EnqueueEvent(E_VirtualKey.Left_Down);
         }
         #endregion
 
         #region Right Arrow
         if( Input.GetKeyUp( m_config.RIGHT_KEY) )
         {
-            JEventSystem.EnqueueEvent( E_VirtualKey.Right_UP, null );
+            JEventSystem.EnqueueEvent( E_VirtualKey.Right_UP );
         }
 
         if( Input.GetKey( m_config.RIGHT_KEY) )
         {
-            JEventSystem.EnqueueEvent( E_VirtualKey.Right, null );
+            JEventSystem.EnqueueEvent( E_VirtualKey.Right );
         }
 
         if( Input.GetKeyDown( m_config.RIGHT_KEY ) )
         {
-            JEventSystem.EnqueueEvent( E_VirtualKey.Right_Down, null );
+            JEventSystem.EnqueueEvent( E_VirtualKey.Right_Down );
         }
         #endregion
 
@@ -93,7 +93,7 @@ public class PCInput : MonoBehaviour {
 
         if( Input.GetKeyDown( m_config.KEY_A ) )
         {
-            JEventSystem.EnqueueEvent( E_VirtualKey.ButtonA_Down, null );
+            JEventSystem.EnqueueEvent( E_VirtualKey.ButtonA_Down );
         }
 
         #endregion
@@ -111,7 +111,7 @@ public class PCInput : MonoBehaviour {
 
         if( Input.GetKeyDown( m_config.KEY_B ) )
         {
-            JEventSystem.EnqueueEvent( E_VirtualKey.ButtonB_Down, null );
+            JEventSystem.EnqueueEvent( E_VirtualKey.ButtonB_Down );
         }
         #endregion 
     }

@@ -78,7 +78,10 @@
     <Compile Include="Assets\Scripts\JombieSpawnManager.cs" />
     <Compile Include="Assets\Scripts\Lib\BlackBoard.cs" />
     <Compile Include="Assets\Scripts\Lib\InputObserver.cs" />
+    <Compile Include="Assets\Scripts\Lib\InstanceContainer.cs" />
     <Compile Include="Assets\Scripts\Lib\JEventSystem.cs" />
+    <Compile Include="Assets\Scripts\Lib\JMonoBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Lib\JResources.cs" />
     <Compile Include="Assets\Scripts\Lib\MonoSingle.cs" />
     <Compile Include="Assets\Scripts\Lib\PCInput.cs" />
     <Compile Include="Assets\Scripts\Lib\Singletone.cs" />
@@ -86,6 +89,7 @@
     <Compile Include="Assets\Scripts\Tables.cs" />
     <Compile Include="Assets\Scripts\TestEventMaker.cs" />
     <Compile Include="Assets\Scripts\TestMover.cs" />
+    <Compile Include="Assets\Scripts\UserData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

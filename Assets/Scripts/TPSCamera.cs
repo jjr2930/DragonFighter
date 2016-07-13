@@ -59,7 +59,7 @@ public class TPSCamera : MonoSingle<TPSCamera> {
         this.transform.LookAt(LookTarget.position + vLookPos);
     }
 
-    public void RunPosObserver(GameObject go)
+    public void RunPosObserver(int iInstanceID)
     {
         if(null != m_Itor)
         {
@@ -70,7 +70,7 @@ public class TPSCamera : MonoSingle<TPSCamera> {
         StartCoroutine(m_Itor);
     }
 
-    public void WalkPosObserver(GameObject go)
+    public void WalkPosObserver(int iInstanceID)
     {
         if(null != m_Itor)
         {
@@ -81,7 +81,7 @@ public class TPSCamera : MonoSingle<TPSCamera> {
         StartCoroutine(m_Itor);
     }
 
-    public void IdlePosObserver(GameObject go)
+    public void IdlePosObserver(int iInstanceID)
     {
         if(null != m_Itor)
         {

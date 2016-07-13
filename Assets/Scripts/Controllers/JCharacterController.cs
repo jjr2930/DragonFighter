@@ -31,22 +31,22 @@ public class JCharacterController : MonoBehaviour {
     }
     #region Locomotion
     #region key press
-    void GetKeyFwd(GameObject go)
+    void GetKeyFwd(int iInstanceID)
     {
         m_CharCtrl.Move(this.transform.forward * Configure.Instance.MOVE_FWD_LIMIT);
     }
 
-    void GetKeyBack(GameObject go)
+    void GetKeyBack(int iInstanceID)
     {
         m_CharCtrl.Move(-this.transform.forward * Configure.Instance.MOVE_BACK_LIMIT);
     }
 
-    void GetKeyLeft(GameObject go)
+    void GetKeyLeft(int iInstanceID)
     {
         m_CharCtrl.Move(-this.transform.right * Configure.Instance.MOVE_STRAFE_LIMIT);
     }
 
-    void GetKeyRight(GameObject go)
+    void GetKeyRight(int iInstanceID)
     {
         m_CharCtrl.Move(this.transform.right * Configure.Instance.MOVE_STRAFE_LIMIT);
     }
@@ -54,22 +54,22 @@ public class JCharacterController : MonoBehaviour {
     #endregion
 
     #region key Up
-    void GetKeyUpFwd(GameObject go)
+    void GetKeyUpFwd(int iInstanceID)
     {
         m_CharCtrl.Move(Vector3.zero);
     }
 
-    void GetKeyUpBack(GameObject go)
+    void GetKeyUpBack(int iInstanceID)
     {
         m_CharCtrl.Move(Vector3.zero);
     }
     
-    void GetKeyUpLeft(GameObject go)
+    void GetKeyUpLeft(int iInstanceID)
     {
         m_CharCtrl.Move(Vector3.zero);
     }
 
-    void GetKeyUpRight(GameObject go)
+    void GetKeyUpRight(int iInstanceID)
     {
         m_CharCtrl.Move(Vector3.zero);
     }
@@ -78,23 +78,23 @@ public class JCharacterController : MonoBehaviour {
 
     #region CombatKey
     #region Key Down
-    void GetKeyDownA(GameObject go)
+    void GetKeyDownA(int iInstanceID)
     {
         Debug.Log("Not to do GetGKeyDownA");
     }
 
-    void GetKeyDownB(GameObject go)
+    void GetKeyDownB(int iInstanceID)
     {
         Debug.Log("Not to do GetGKeyDownB");
     }
 
     #endregion
     #region Key Up
-    void GetKeyUpA(GameObject go)
+    void GetKeyUpA(int iInstanceID)
     {
         Debug.Log("Not to do GetGKeyUpA");
     }
-    void GetKeyUpB(GameObject go)
+    void GetKeyUpB(int iInstanceID)
     {
         Debug.Log("Not to do GetGKeyUpB");
     }

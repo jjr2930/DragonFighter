@@ -38,7 +38,7 @@ public class JAnimatorController : MonoBehaviour {
     }
 
     #region Direction
-    void ProcessForwardBtn(GameObject go)
+    void ProcessForwardBtn(int iInstanceID)
     {
         if (null != m_Fwditer)
         {
@@ -54,7 +54,7 @@ public class JAnimatorController : MonoBehaviour {
         m_animator.SetFloat(Configure.Instance.ANIM_FORWARD, m_fCurSpeed);
     }
 
-    void ProcessBackBtn(GameObject go)
+    void ProcessBackBtn(int iInstanceID)
     {
         Debug.Log("Back Btn");
         if (null != m_Fwditer)
@@ -71,7 +71,7 @@ public class JAnimatorController : MonoBehaviour {
         m_animator.SetFloat(Configure.Instance.ANIM_FORWARD, m_fCurSpeed);
     }
 
-    void ProcessLeftBtn(GameObject go)
+    void ProcessLeftBtn(int iInstanceID)
     {
         if (null != m_Strafeiter)
         {
@@ -87,7 +87,7 @@ public class JAnimatorController : MonoBehaviour {
         m_animator.SetFloat(Configure.Instance.ANIM_STRAFE, -m_fCurStrafe);
     }
 
-    void ProcessRightBtn(GameObject go)
+    void ProcessRightBtn(int iInstanceID)
     {
         if (null != m_Strafeiter)
         {
@@ -103,7 +103,7 @@ public class JAnimatorController : MonoBehaviour {
         m_animator.SetFloat(Configure.Instance.ANIM_STRAFE, m_fCurStrafe);
     }
 
-    void ProcessBackBtnUp(GameObject go)
+    void ProcessBackBtnUp(int iInstanceID)
     {
         if (null != m_Fwditer)
         {
@@ -117,7 +117,7 @@ public class JAnimatorController : MonoBehaviour {
         StartCoroutine(m_Fwditer);
     }
 
-    void ProcessFwdBtnUp(GameObject go)
+    void ProcessFwdBtnUp(int iInstanceID)
     {
         if (null != m_Fwditer)
         {
@@ -129,7 +129,7 @@ public class JAnimatorController : MonoBehaviour {
         StartCoroutine(m_Fwditer);
     }
 
-    void ProcessLeftBtnUp(GameObject go)
+    void ProcessLeftBtnUp(int iInstanceID)
     {
         if (null != m_Strafeiter)
         {
@@ -141,7 +141,7 @@ public class JAnimatorController : MonoBehaviour {
         StartCoroutine(m_Strafeiter);
     }
 
-    void ProcessRightBtnUp(GameObject go)
+    void ProcessRightBtnUp(int iInstanceID)
     {
         if (null != m_Strafeiter)
         {
@@ -194,14 +194,14 @@ public class JAnimatorController : MonoBehaviour {
 
     #region Combat Button
 
-    public void ProcessBtnADown(GameObject go)
+    public void ProcessBtnADown(int iInstanceID)
     {
         ResetAllCombatTrigger();
         m_animator.applyRootMotion = true;
         m_animator.SetTrigger(Configure.Instance.ANIM_BtnA);
     }
 
-    public void ProcessBtnBDown(GameObject go)
+    public void ProcessBtnBDown(int iInstanceID)
     {
         ResetAllCombatTrigger();
         m_animator.applyRootMotion = true;
@@ -216,11 +216,18 @@ public class JAnimatorController : MonoBehaviour {
 
     #endregion
 
-    public void CreateAttackEvent()
+    /// <summary>
+    /// 애니메이션 클립에서 이 함수를 호출한다 이 함수는 유저가 공격했다는 이벤트를 뿌려준다.
+    /// </summary>
+    /// <param name="iAddDmg">기술마다 추가되는 대미지를 파라미터로 받는다</param>
+    public void CreateAttackEvent(int iAddDmg)
     {
         Debug.Log("CreateAttackEvent called");
-        JEventSystem.EnqueueEvent(E_AnimEvent.UserAttack,null);
+        int dmg = UserData.Instance.TotalDmg + iAddDmg;
+        JEventSystem.EnqueueEvent(E_AnimEvent.UserAttack, dmg);
+        
     }
+    
 }
 
 
