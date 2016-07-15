@@ -34,10 +34,10 @@ public class Configure : MonoSingle<Configure>
 
     public float ANIM_STOP_SPEED_ACCEL = 2f;
 
-    public string ANIM_FORWARD = "Forward";
-    public string ANIM_STRAFE = "Right";
-    public string ANIM_BtnA = "BtnA";
-    public string ANIM_BtnB = "BtnB";
+    public string ANIM_USER_FORWARD = "Forward";
+    public string ANIM_USER_STRAFE = "Right";
+    public string ANIM_USER_BtnA = "BtnA";
+    public string ANIM_USER_BtnB = "BtnB";
 
     #endregion
 
@@ -46,9 +46,23 @@ public class Configure : MonoSingle<Configure>
     public float MOVE_FWD_LIMIT = 1f;
     public float MOVE_BACK_LIMIT = 1f;
     public float MOVE_STRAFE_LIMIT = 1f;
-    
+
 
     #endregion
+
+    #region zombie Configure
+
+    public string ANIM_ZOMBIE_IDLE      = "Idle";
+    public string ANIM_ZOMBIE_WALK      = "Walk";
+    public string ANIM_ZOMBIE_RUN       = "Run";
+    public string ANIM_ZOMBIE_SCREAM    = "Scream";
+    public string ANIM_ZOMIBE_ATTACK    = "Attack";
+    public string ANIM_ZOMBIE_NECKBITE  = "NeckBite";
+    public string ANIM_ZOMBIE_BITE      = "Bite";
+    public string ANIM_ZOMBIE_DEATH_FWD = "DeathForward";
+    public string ANIM_ZOMBIE_DEATH_BCK = "DeathBack";
+
+    #endregion  
 
     #region tag
 

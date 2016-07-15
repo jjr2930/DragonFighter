@@ -70,11 +70,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Configure.cs" />
-    <Compile Include="Assets\Scripts\Controllers\JAnimatorController.cs" />
     <Compile Include="Assets\Scripts\Controllers\JCharacterController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\JPlayerAnimatorController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\ZombieAnimatorController.cs" />
     <Compile Include="Assets\Scripts\Enums.cs" />
     <Compile Include="Assets\Scripts\IngameManager.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
+    <Compile Include="Assets\Scripts\JombieData.cs" />
+    <Compile Include="Assets\Scripts\JombieFSM.cs" />
     <Compile Include="Assets\Scripts\JombieSpawnManager.cs" />
     <Compile Include="Assets\Scripts\Lib\BlackBoard.cs" />
     <Compile Include="Assets\Scripts\Lib\InputObserver.cs" />

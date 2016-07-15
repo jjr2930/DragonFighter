@@ -20,17 +20,17 @@ public class TestEventMaker : MonoBehaviour
     {
         if( GUILayout.Button( "Run" ) )
         {
-            JEventSystem.EnqueueEvent( E_AnimEvent.Run );
+            JEventSystem.EnqueueEvent( E_UserAnimEvent.Run );
         }
 
         if( GUILayout.Button( "Idle" ) )
         {
-            JEventSystem.EnqueueEvent( E_AnimEvent.Idle );
+            JEventSystem.EnqueueEvent( E_UserAnimEvent.Idle );
         }
 
         if( GUILayout.Button( "Walk" ) )
         {
-            JEventSystem.EnqueueEvent( E_AnimEvent.Walk );
+            JEventSystem.EnqueueEvent( E_UserAnimEvent.Walk );
         }
     }
 }

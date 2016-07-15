@@ -38,16 +38,31 @@ public enum E_VirtualKey : int
     Max
 }
 
-public enum E_AnimEvent : int
+public enum E_UserAnimEvent : int
 {
     Idle = 0,
     Walk,
-    UserAttack,
+    Attack,
     EnemyAttack,
     Run,
     Max,
 
 }
+
+public enum E_ZombieAnimEvent : int
+{
+    Idle = 0,
+    Scream,
+    Walk,
+    Run,
+    Attack,
+    Bite,
+    NeckBite,
+    DeathForward,
+    DeathBack
+}
+
+
 
 public enum E_EtcEvent : int
 {

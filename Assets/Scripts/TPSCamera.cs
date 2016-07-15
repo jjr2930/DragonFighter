@@ -24,9 +24,9 @@ public class TPSCamera : MonoSingle<TPSCamera> {
     {
         m_tPlayer = GameObject.FindWithTag("Player").transform;
       
-        JEventSystem.AddObserver(E_AnimEvent.Idle, IdlePosObserver);
-        JEventSystem.AddObserver(E_AnimEvent.Run, RunPosObserver);
-        JEventSystem.AddObserver(E_AnimEvent.Walk, WalkPosObserver);
+        JEventSystem.AddObserver(E_UserAnimEvent.Idle, IdlePosObserver);
+        JEventSystem.AddObserver(E_UserAnimEvent.Run, RunPosObserver);
+        JEventSystem.AddObserver(E_UserAnimEvent.Walk, WalkPosObserver);
     }
 	// Update is called once per frame
 	void Update ()
