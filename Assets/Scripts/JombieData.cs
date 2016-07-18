@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class JombieData : MonoBehaviour {
+public class ZombieData : MonoBehaviour {
     int m_iHP;
     int m_iDmg;
     E_ZombieType m_eType;
-
     public int HP
     {
         get
@@ -15,6 +14,15 @@ public class JombieData : MonoBehaviour {
         set
         {
             m_iHP = value;
+            if(m_iHP <= 0)
+            {
+                int rnd = Random.Range(0,2);
+
+                JEventSystem.EnqueueEvent((rnd == 0) 
+                                            ? E_ZombieAnimEvent.DeathBack 
+                                            : E_ZombieAnimEvent.DeathForward,
+                                            GetInstanceID());
+            }
         }
     }
 

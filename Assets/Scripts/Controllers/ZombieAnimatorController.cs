@@ -6,7 +6,7 @@ public class ZombieAnimatorController : MonoBehaviour
     [SerializeField]
     Animator m_animator = null;
     
-    JombieData m_jd = null;
+    ZombieData m_jd = null;
 
     [SerializeField]
     int     m_iInstanceID = 0;
@@ -19,14 +19,14 @@ public class ZombieAnimatorController : MonoBehaviour
     {
         m_animator = this.GetComponent<Animator>();
         m_iInstanceID = this.GetInstanceID();
-        m_jd = this.GetComponent<JombieData>();
+        m_jd = this.GetComponent<ZombieData>();
     }
     
     /// <summary>
     /// parameter is damage
     /// </summary>
-    /// <param name="number">dmg</param>
-    public void GetHitEvent(int number)
+    /// <param name="iDmg">dmg</param>
+    public void GetHitEvent(int iDmg)
     {
         GameObject player = GameObject.FindWithTag(Configure.Instance.TAG_PLAYER);
 
@@ -36,7 +36,7 @@ public class ZombieAnimatorController : MonoBehaviour
 
         if(SqrDistance <= Mathf.Pow(Configure.Instance.PLAYER_ATTACK_RANGE, 2))
         {
-            JombieData
+            m_jd.HP -= iDmg;
             m_animator.SetTrigger(Configure.Instance.ANIM_ZOMBIE_HIT);
         }
     }

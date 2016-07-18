@@ -66,7 +66,7 @@ public enum E_ZombieAnimEvent : int
 
 public enum E_EtcEvent : int
 {
-    DiffultUp = 0,
+    PointUp = 0,
     UserDied,
     Max
     

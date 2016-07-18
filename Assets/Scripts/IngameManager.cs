@@ -29,5 +29,12 @@ public class IngameManager : MonoSingle<IngameManager> {
             goPlayer.AddComponent<JCharacterController>();
         }
     }
-	
+
+
+    void GetZombieDeathEvent( int score )
+    {
+        BlackBoard.Instance.UserScore += score;
+
+        JEventSystem.EnqueueEvent(E_EtcEvent.PointUp, BlackBoard.Instance.UserScore);
+    }
 }

@@ -12,6 +12,7 @@ class ResourcesPathTable
     public string path;
 }
 
+
 [System.Serializable]
 class DifficultTable
 {
@@ -19,8 +20,7 @@ class DifficultTable
     public int[] enemyID;
     public int[] enemyHP;
     public int[] enemyDMG;
-    public int[] enemyAMR;
-    public int[] CCPM; //create count per munite
+    public int[] CCPM; //create count per minuite
 }
 
 class TableLoader :

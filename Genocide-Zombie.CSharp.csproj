@@ -77,7 +77,7 @@
     <Compile Include="Assets\Scripts\IngameManager.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\JombieData.cs" />
-    <Compile Include="Assets\Scripts\JombieFSM.cs" />
+    <Compile Include="Assets\Scripts\JombieEventMaker.cs" />
     <Compile Include="Assets\Scripts\JombieSpawnManager.cs" />
     <Compile Include="Assets\Scripts\Lib\BlackBoard.cs" />
     <Compile Include="Assets\Scripts\Lib\InputObserver.cs" />

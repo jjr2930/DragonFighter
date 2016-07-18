@@ -8,7 +8,7 @@ public class JombieEventMaker : MonoBehaviour {
     Transform       m_tPlayer   = null;
     NavMeshAgent    m_agent     = null;
     IEnumerator     m_itor      = null;
-    JombieData      m_data      = null;
+    ZombieData      m_data      = null;
 
     [SerializeField]
     float m_fIntervalTime = 1f;
@@ -31,7 +31,7 @@ public class JombieEventMaker : MonoBehaviour {
     {
 	    m_tPlayer   = GameObject.FindWithTag(Configure.Instance.TAG_PLAYER).transform;
         m_agent     = this.GetComponent<NavMeshAgent>(); 
-        m_data      = this.GetComponent<JombieData>();
+        m_data      = this.GetComponent<ZombieData>();
         
 	}
 	

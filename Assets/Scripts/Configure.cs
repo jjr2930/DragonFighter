@@ -57,8 +57,11 @@ public class Configure : MonoSingle<Configure>
 
     #endregion
 
+    #endregion
+
     #region zombie Configure
 
+    #region animation param
     public string ANIM_ZOMBIE_IDLE      = "Idle";
     public string ANIM_ZOMBIE_WALK      = "Walk";
     public string ANIM_ZOMBIE_RUN       = "Run";
@@ -69,15 +72,29 @@ public class Configure : MonoSingle<Configure>
     public string ANIM_ZOMBIE_DEATH_FWD = "DeathForward";
     public string ANIM_ZOMBIE_DEATH_BCK = "DeathBack";
     public string ANIM_ZOMBIE_HIT       = "HitReaction";
+    #endregion
 
-    #endregion  
+    #region etc
+
+    public int ZOMBIE_DEFAULT_POINT = 5;
+        
+    #endregion
+    #endregion
+
+
 
     #region tag
 
     public string TAG_PLAYER = "Player";
     #endregion
 
+    #region Resrouces path
+    public string PATH_ZOMBIE_0 = "Zombie_0";
+    public string PATH_ZOMBIE_1 = "Zombie_1";
+    public string PATH_ZOMBIE_2 = "Zombie_2";
+    public string PATH_ZOMBIE_3 = "Zombie_3";
 
-   
+    #endregion
+
 
 }
