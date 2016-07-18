@@ -71,3 +71,11 @@ public enum E_EtcEvent : int
     Max
     
 }
+
+
+public enum E_ZombieType : int
+{
+    Run = 0,
+    Walk,
+    MAX
+}

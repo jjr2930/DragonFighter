@@ -50,6 +50,13 @@ public class Configure : MonoSingle<Configure>
 
     #endregion
 
+
+    #region Player ETC
+
+    public float PLAYER_ATTACK_RANGE = 1f;
+
+    #endregion
+
     #region zombie Configure
 
     public string ANIM_ZOMBIE_IDLE      = "Idle";
@@ -61,6 +68,7 @@ public class Configure : MonoSingle<Configure>
     public string ANIM_ZOMBIE_BITE      = "Bite";
     public string ANIM_ZOMBIE_DEATH_FWD = "DeathForward";
     public string ANIM_ZOMBIE_DEATH_BCK = "DeathBack";
+    public string ANIM_ZOMBIE_HIT       = "HitReaction";
 
     #endregion  
 
@@ -70,6 +78,6 @@ public class Configure : MonoSingle<Configure>
     #endregion
 
 
-    #endregion
+   
 
 }
