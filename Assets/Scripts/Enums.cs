@@ -35,6 +35,7 @@ public enum E_VirtualKey : int
     ButtonB_Up,
     ButtonB,
 
+    Pause_Down,
     Max
 }
 
@@ -72,6 +73,11 @@ public enum E_EtcEvent : int
     
 }
 
+public enum E_UIEvent : int
+{
+    PressPauseButton,
+
+}
 
 public enum E_ZombieType : int
 {

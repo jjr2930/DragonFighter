@@ -16,6 +16,11 @@ public class JResources : Singletone<JResources>
 
     #region static function for utiltiy
 
+    public static T LoadStreamingAsset<T>(string strPath) where T : class
+    {
+        return Instance.LoadStreamingAsest<T>(strPath);
+    }
+
     public static Object Load(string strPath)
     {
         return Instance.OnLoad(strPath);
@@ -47,6 +52,30 @@ public class JResources : Singletone<JResources>
     public JResources()
     {
         m_instancies = new Dictionary<int , Object>();
+    }
+
+    T LoadStreamingAsest<T>(string strPath) where T : class
+    {
+        string strFullPath = Application.streamingAssetsPath + "/" + strPath;
+
+        WWW www = new WWW(strFullPath);
+
+        while(!www.isDone)
+        {
+
+        }
+
+        if(string.IsNullOrEmpty( www.error))
+        {
+            Debug.Log("Loading Streamingasset is failed");
+        }
+        else
+        {
+            T result = www.assetBundle.mainAsset as T;
+            return result;
+        }
+
+        return null;
     }
 
     Object OnLoad(string strPath)
