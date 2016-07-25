@@ -20,6 +20,12 @@ public class Configure : MonoSingle<Configure>
     public KeyCode KEY_B = KeyCode.B;
     #endregion
 
+    #region Virtual lever sleep amount
+
+    public float LEVER_SLEEP = 20f;
+
+    #endregion
+
     #region Player Configure
 
     #region Player Animator Configure
@@ -81,8 +87,6 @@ public class Configure : MonoSingle<Configure>
     #endregion
     #endregion
 
-
-
     #region tag
 
     public string TAG_PLAYER = "Player";
@@ -96,5 +100,11 @@ public class Configure : MonoSingle<Configure>
 
     #endregion
 
+    #region SceneName
 
+    public string SCENE_MENU = "Menu";
+    public string SCENE_INGAME = "Ingame";
+    public string SCENE_INTRO = "Intro";
+
+    #endregion  
 }

@@ -75,8 +75,8 @@ public enum E_EtcEvent : int
 
 public enum E_UIEvent : int
 {
-    PressPauseButton,
-
+    SceneChange = 0,
+    MAX
 }
 
 public enum E_ZombieType : int
@@ -84,4 +84,15 @@ public enum E_ZombieType : int
     Run = 0,
     Walk,
     MAX
+}
+
+public enum E_SceneNumber : int
+{
+    None = 0,
+    Intro,
+    Menu,
+    Ingame,
+    Exit,
+    MAX
+
 }

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
+
 
 public class IngameManager : MonoSingle<IngameManager> {
 
@@ -14,7 +16,7 @@ public class IngameManager : MonoSingle<IngameManager> {
             m_inputInstance = this.gameObject.AddComponent<PCInput>();
         }
 
-        m_eventContainer = this.gameObject.AddComponent<JEventSystem>();
+        m_eventContainer = JEventSystem.Instance;
 
         GameObject goPlayer     = GameObject.FindWithTag(Configure.Instance.TAG_PLAYER);
         JPlayerAnimatorController JAC = goPlayer.GetComponent<JPlayerAnimatorController>();
@@ -37,4 +39,19 @@ public class IngameManager : MonoSingle<IngameManager> {
 
         JEventSystem.EnqueueEvent(E_EtcEvent.PointUp, BlackBoard.Instance.UserScore);
     }
+
+    void ListenChangeScene(int num)
+    {
+        E_SceneNumber eTarget = (E_SceneNumber)num;
+        switch(eTarget)
+        {
+            case E_SceneNumber.Menu:
+                SceneManager.LoadSceneAsync(Configure.Instance.SCENE_MENU);
+                break;
+
+            default:
+                Debug.LogFormat("Other case is not supported SceneName %s",((E_SceneNumber)num).ToString());
+                break;
+        }
+    } 
 }
