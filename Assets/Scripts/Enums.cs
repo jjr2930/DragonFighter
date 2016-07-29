@@ -69,6 +69,7 @@ public enum E_EtcEvent : int
 {
     PointUp = 0,
     UserDied,
+    VirtualKeyOn,
     Max
     
 }

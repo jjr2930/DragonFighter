@@ -10,6 +10,10 @@ public class App : MonoSingle<App>
     static void OnRuntimeMethodLoad()
     {
         App instance = App.Instance;
+        if(Configure.Instance.SCENE_INGAME == SceneManager.GetActiveScene().name )
+        {
+            IngameManager im = IngameManager.Instance;
+        }
     }
 
     void Start()

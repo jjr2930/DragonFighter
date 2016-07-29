@@ -85,6 +85,8 @@
     <Compile Include="Assets\Scripts\Lib\JResources.cs" />
     <Compile Include="Assets\Scripts\Lib\MonoSingle.cs" />
     <Compile Include="Assets\Scripts\Lib\PCInput.cs" />
+    <Compile Include="Assets\Scripts\Lib\ParticleManager.cs" />
+    <Compile Include="Assets\Scripts\Lib\ParticleNode.cs" />
     <Compile Include="Assets\Scripts\Lib\Singletone.cs" />
     <Compile Include="Assets\Scripts\Lib\VirtualLever.cs" />
     <Compile Include="Assets\Scripts\TPSCamera.cs" />
@@ -185,6 +187,10 @@
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+    <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

@@ -89,10 +89,12 @@ public class Configure : MonoSingle<Configure>
 
     #region tag
 
-    public string TAG_PLAYER = "Player";
+    public string TAG_PLAYER    = "Player";
+    public string TAG_RESPAWN   = "Respawn";
     #endregion
 
     #region Resrouces path
+    public string PATH_PLAYER   = "Player";
     public string PATH_ZOMBIE_0 = "Zombie_0";
     public string PATH_ZOMBIE_1 = "Zombie_1";
     public string PATH_ZOMBIE_2 = "Zombie_2";

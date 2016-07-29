@@ -6,7 +6,7 @@ using System.Collections.Generic;
 class ZombieSpawnManager : 
     MonoSingle<ZombieSpawnManager>
 {
-    int m_iDiffIndex = 0;
+    int m_iDiffcultIndex = 0;
     DifficultTable m_diffTable = null;
     List<IEnumerator> m_listCoroutines = null;
     void Awake()

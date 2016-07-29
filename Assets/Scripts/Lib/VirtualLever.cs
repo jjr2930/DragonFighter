@@ -120,7 +120,7 @@ public class VirtualLever : MonoBehaviour
             return;
         }
 
-        Debug.Log("Drag");
+        //Debug.Log("Drag");
 
 #if UNITY_EDITOR
         Vector2 pos = Input.mousePosition;

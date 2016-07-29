@@ -13,6 +13,6 @@ public class IngamePause : MonoBehaviour
 	void ListenPause(int num)
     {
         gameObject.SetActive(!gameObject.activeSelf);
-        Time.timeScale = (Time.timeScale == 1f) ? 0f : 1f;
+        Time.timeScale = (gameObject.activeSelf) ? 0f : 1f;
     }
 }

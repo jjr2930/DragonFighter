@@ -16,11 +16,20 @@ public class IngameManager : MonoSingle<IngameManager> {
             m_inputInstance = this.gameObject.AddComponent<PCInput>();
         }
 
+        else if(Application.platform == RuntimePlatform.Android
+            || Application.platform == RuntimePlatform.IPhonePlayer)
+        {
+            StartCoroutine(CreateVirtualButtonOnEvent());
+        }
         m_eventContainer = JEventSystem.Instance;
 
-        GameObject goPlayer     = GameObject.FindWithTag(Configure.Instance.TAG_PLAYER);
-        JPlayerAnimatorController JAC = goPlayer.GetComponent<JPlayerAnimatorController>();
-        JCharacterController JCC = goPlayer.GetComponent<JCharacterController>();
+        Vector3     vSpawnPostion   = GameObject.FindWithTag(Configure.Instance.TAG_RESPAWN).transform.position;
+        Object      oPlayer         = JResources.Load(Configure.Instance.PATH_PLAYER);
+        GameObject  goPlayer        = JResources.Instantiate(oPlayer,vSpawnPostion,Quaternion.identity) as GameObject;
+        
+        JPlayerAnimatorController   JAC         = goPlayer.GetComponent<JPlayerAnimatorController>();
+        JCharacterController        JCC         = goPlayer.GetComponent<JCharacterController>();
+
         if (null == JAC)
         {
             goPlayer.AddComponent<JPlayerAnimatorController>();
@@ -53,5 +62,16 @@ public class IngameManager : MonoSingle<IngameManager> {
                 Debug.LogFormat("Other case is not supported SceneName %s",((E_SceneNumber)num).ToString());
                 break;
         }
-    } 
+    }
+
+    #region On Virtual Button
+
+    IEnumerator CreateVirtualButtonOnEvent()
+    {
+        yield return null;
+        yield return null;
+        JEventSystem.EnqueueEvent(E_EtcEvent.VirtualKeyOn);
+    }
+
+    #endregion
 }
