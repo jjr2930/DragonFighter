@@ -9,8 +9,8 @@ public class App : MonoSingle<App>
     [RuntimeInitializeOnLoadMethod]
     static void OnRuntimeMethodLoad()
     {
-        App instance = App.Instance;
-        if(Configure.Instance.SCENE_INGAME == SceneManager.GetActiveScene().name )
+        App.Initilize();
+        if (Configure.Instance.SCENE_INGAME == SceneManager.GetActiveScene().name)
         {
             IngameManager im = IngameManager.Instance;
         }
@@ -18,6 +18,13 @@ public class App : MonoSingle<App>
 
     void Start()
     {
+        //initialize configure and tables
+        Configure.Initilize();
+        TableLoader.Initilize();
+
+        JLocalize.Instance.SetLocal(GetSystemLanguage());
+        JLocalize.Instance.LoadLocalizeTable();
+
         JEventSystem.AddObserver(E_UIEvent.SceneChange, ListenChangeScene);
     }
 
@@ -42,5 +49,11 @@ public class App : MonoSingle<App>
                 Application.Quit();
                 break;
         }
+    }
+
+    string GetSystemLanguage()
+    {
+        string language = Application.systemLanguage.ToString();
+        return language;
     }
 }

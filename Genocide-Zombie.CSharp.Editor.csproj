@@ -120,6 +120,10 @@
     <Compile Include="Assets\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Resources\Tables\Configure.txt" />
+    <None Include="Assets\Resources\Tables\DifficultTable.txt" />
+    <None Include="Assets\Resources\Tables\Localize.txt" />
+    <None Include="Assets\Resources\Tables\ResourceTable.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />

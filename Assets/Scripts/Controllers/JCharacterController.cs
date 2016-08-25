@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿    using UnityEngine;
 using System.Collections;
 
 public class JCharacterController : MonoBehaviour {
@@ -43,12 +43,14 @@ public class JCharacterController : MonoBehaviour {
 
     void GetKeyLeft(int iInstanceID)
     {
-        m_CharCtrl.Move(-this.transform.right * Configure.Instance.MOVE_STRAFE_LIMIT);
+        float fRotationSpeed = Configure.Instance.MOVE_ROT_SPEED * Time.deltaTime;
+        m_CharCtrl.transform.Rotate(Vector3.up, -fRotationSpeed);
     }
 
     void GetKeyRight(int iInstanceID)
     {
-        m_CharCtrl.Move(this.transform.right * Configure.Instance.MOVE_STRAFE_LIMIT);
+        float fRotationSpeed = Configure.Instance.MOVE_ROT_SPEED * Time.deltaTime;
+        m_CharCtrl.transform.Rotate(Vector3.up, fRotationSpeed);
     }
 
     #endregion
@@ -66,12 +68,13 @@ public class JCharacterController : MonoBehaviour {
     
     void GetKeyUpLeft(int iInstanceID)
     {
-        m_CharCtrl.Move(Vector3.zero);
+     
+        //m_CharCtrl.Move(Vector3.zero);
     }
 
     void GetKeyUpRight(int iInstanceID)
     {
-        m_CharCtrl.Move(Vector3.zero);
+        //m_CharCtrl.Move(Vector3.zero);
     }
     #endregion
     #endregion

@@ -36,4 +36,10 @@ public class MonoSingle<T>:MonoBehaviour where T : MonoBehaviour
             return _instance;
         }
     }
+
+    public static void Initilize()
+    {
+        _instance = Instance;
+    }
+
 }

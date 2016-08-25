@@ -7,7 +7,7 @@ class ZombieSpawnManager :
     MonoSingle<ZombieSpawnManager>
 {
     int m_iDiffcultIndex = 0;
-    DifficultTable m_diffTable = null;
+    DifficultData m_diffTable = null;
     List<IEnumerator> m_listCoroutines = null;
     void Awake()
     {

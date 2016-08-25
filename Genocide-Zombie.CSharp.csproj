@@ -81,16 +81,19 @@
     <Compile Include="Assets\Scripts\Lib\InputObserver.cs" />
     <Compile Include="Assets\Scripts\Lib\InstanceContainer.cs" />
     <Compile Include="Assets\Scripts\Lib\JEventSystem.cs" />
+    <Compile Include="Assets\Scripts\Lib\JLocalize.cs" />
     <Compile Include="Assets\Scripts\Lib\JMonoBehaviour.cs" />
     <Compile Include="Assets\Scripts\Lib\JResources.cs" />
+    <Compile Include="Assets\Scripts\Lib\LocalLabel.cs" />
     <Compile Include="Assets\Scripts\Lib\MonoSingle.cs" />
     <Compile Include="Assets\Scripts\Lib\PCInput.cs" />
     <Compile Include="Assets\Scripts\Lib\ParticleManager.cs" />
     <Compile Include="Assets\Scripts\Lib\ParticleNode.cs" />
     <Compile Include="Assets\Scripts\Lib\Singletone.cs" />
     <Compile Include="Assets\Scripts\Lib\VirtualLever.cs" />
+    <Compile Include="Assets\Scripts\SaveConfigure.cs" />
     <Compile Include="Assets\Scripts\TPSCamera.cs" />
-    <Compile Include="Assets\Scripts\Tables.cs" />
+    <Compile Include="Assets\Scripts\TableLoader.cs" />
     <Compile Include="Assets\Scripts\TestMover.cs" />
     <Compile Include="Assets\Scripts\UI\IngamePause.cs" />
     <Compile Include="Assets\Scripts\UI\IngameUIEventMaker.cs" />
@@ -101,6 +104,10 @@
     <Compile Include="Assets\Scripts\ZombieSpawnManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Resources\Tables\Configure.txt" />
+    <None Include="Assets\Resources\Tables\DifficultTable.txt" />
+    <None Include="Assets\Resources\Tables\Localize.txt" />
+    <None Include="Assets\Resources\Tables\ResourceTable.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />

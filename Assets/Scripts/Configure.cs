@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
 public class Configure : MonoSingle<Configure>
 {
     #region Camera's Configure
@@ -52,10 +53,9 @@ public class Configure : MonoSingle<Configure>
     public float MOVE_FWD_LIMIT = 1f;
     public float MOVE_BACK_LIMIT = 1f;
     public float MOVE_STRAFE_LIMIT = 1f;
-
+    public float MOVE_ROT_SPEED = 120f;
 
     #endregion
-
 
     #region Player ETC
 
@@ -108,5 +108,21 @@ public class Configure : MonoSingle<Configure>
     public string SCENE_INGAME = "Ingame";
     public string SCENE_INTRO = "Intro";
 
+    #endregion
+
+    #region TableName Path
+    public string PATH_DIFF_TABLE = "Tables/DifficultTable";
+    public string PATH_LOCAL_TABLE = "Tables/Localize";
+    public string PATH_RESC_TABLE = "Tables/ResourceTable";
     #endregion  
+    /// <summary>
+    /// initialize( Load Configure.txt and overwrite)
+    /// </summary>
+    void Awake()
+    {
+        TextAsset ta = JResources.Load("Tables/Configure") as TextAsset;
+        string json = ta.text;
+
+        JsonUtility.FromJsonOverwrite(json, this);      
+    }    
 }

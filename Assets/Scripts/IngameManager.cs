@@ -39,7 +39,9 @@ public class IngameManager : MonoSingle<IngameManager> {
         {
             goPlayer.AddComponent<JCharacterController>();
         }
+        
     }
+    
 
 
     void GetZombieDeathEvent( int score )

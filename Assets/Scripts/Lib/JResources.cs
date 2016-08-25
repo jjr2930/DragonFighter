@@ -67,7 +67,7 @@ public class JResources : Singletone<JResources>
 
         if(string.IsNullOrEmpty( www.error))
         {
-            Debug.Log("Loading Streamingasset is failed");
+            Debug.Log("Streaming asset loading is failed");
         }
         else
         {
