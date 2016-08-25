@@ -21,9 +21,7 @@ public class App : MonoSingle<App>
         //initialize configure and tables
         Configure.Initilize();
         TableLoader.Initilize();
-
-        JLocalize.Instance.SetLocal(GetSystemLanguage());
-        JLocalize.Instance.LoadLocalizeTable();
+        JLocalize.Initialize();
 
         JEventSystem.AddObserver(E_UIEvent.SceneChange, ListenChangeScene);
     }
@@ -50,10 +48,5 @@ public class App : MonoSingle<App>
                 break;
         }
     }
-
-    string GetSystemLanguage()
-    {
-        string language = Application.systemLanguage.ToString();
-        return language;
-    }
+    
 }
