@@ -1,0 +1,30 @@
+﻿{
+	"table": 
+	[
+		{
+			"key": "A",
+			"location": "Korean",
+			"value": "A"
+		}, 
+		{
+			"key": "B",
+			"location": "Korean",
+			"value": "B"
+		},
+		{
+			"key": "CONTINUE",
+			"location": "Korean",
+			"value": "계속"
+		},
+		{
+			"key": "MENU",
+			"location": "Korean",
+			"value": "메뉴"
+		},
+		{
+			"key": "EXIT",
+			"location": "Korean",
+			"value": "종료"
+		}
+	]
+}

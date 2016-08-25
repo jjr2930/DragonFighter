@@ -17,4 +17,9 @@ public class Singletone<T> where T : class, new()
             return _instance;
         }
     }
+
+    public static void Initialize()
+    {
+        _instance = Instance;
+    }
 }

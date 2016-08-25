@@ -14,7 +14,7 @@ public class MonoSingle<T>:MonoBehaviour where T : MonoBehaviour
                 T[] foundeds = GameObject.FindObjectsOfType<T>();
                 if(1 < foundeds.Length)
                 {
-                    Debug.LogErrorFormat("Fatal Error : singletone object's count is can not over than 1, there is must one object in scene");
+                    Debug.LogErrorFormat("Fatal Error : singletone object's count can not be over than 1, there is must one object in scene");
                     return null;
                 }
 
@@ -24,6 +24,9 @@ public class MonoSingle<T>:MonoBehaviour where T : MonoBehaviour
                 }
                 else
                 {
+                    Debug.LogFormat("There is no {0}, Create {1}", 
+                        typeof(T).ToString(), typeof(T).ToString());
+
                     GameObject go = new GameObject(typeof(T).ToString());
                     _instance = go.AddComponent<T>();
                 }
@@ -33,4 +36,10 @@ public class MonoSingle<T>:MonoBehaviour where T : MonoBehaviour
             return _instance;
         }
     }
+
+    public static void Initilize()
+    {
+        _instance = Instance;
+    }
+
 }

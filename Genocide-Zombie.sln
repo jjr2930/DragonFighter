@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genocide-Zombie.CSharp.Plugins", "Genocide-Zombie.CSharp.Plugins.csproj", "{07C5EF07-D0A6-2063-81C4-BBBC8DDA2C99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genocide-Zombie.CSharp", "Genocide-Zombie.CSharp.csproj", "{F230C535-8FD5-D27C-6246-5B1C6CFF8C93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genocide-Zombie.CSharp.Editor", "Genocide-Zombie.CSharp.Editor.csproj", "{5073831F-15D9-436B-EBFE-8E7FD778B4B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07C5EF07-D0A6-2063-81C4-BBBC8DDA2C99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07C5EF07-D0A6-2063-81C4-BBBC8DDA2C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07C5EF07-D0A6-2063-81C4-BBBC8DDA2C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07C5EF07-D0A6-2063-81C4-BBBC8DDA2C99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F230C535-8FD5-D27C-6246-5B1C6CFF8C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F230C535-8FD5-D27C-6246-5B1C6CFF8C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F230C535-8FD5-D27C-6246-5B1C6CFF8C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F230C535-8FD5-D27C-6246-5B1C6CFF8C93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5073831F-15D9-436B-EBFE-8E7FD778B4B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5073831F-15D9-436B-EBFE-8E7FD778B4B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5073831F-15D9-436B-EBFE-8E7FD778B4B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5073831F-15D9-436B-EBFE-8E7FD778B4B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

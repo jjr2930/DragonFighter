@@ -35,14 +35,65 @@ public enum E_VirtualKey : int
     ButtonB_Up,
     ButtonB,
 
+    Pause_Down,
     Max
 }
 
-public enum E_AnimEvent : int
+public enum E_UserAnimEvent : int
 {
     Idle = 0,
     Walk,
+    Attack,
+    EnemyAttack,
     Run,
     Max,
+
+}
+
+public enum E_ZombieAnimEvent : int
+{
+    Idle = 0,
+    Scream,
+    Walk,
+    Run,
+    Attack,
+    Bite,
+    NeckBite,
+    DeathForward,
+    DeathBack
+}
+
+
+
+public enum E_EtcEvent : int
+{
+    PointUp = 0,
+    UserDied,
+    VirtualKeyOn,
+    Max
+    
+}
+
+public enum E_UIEvent : int
+{
+    SceneChange = 0,
+    MAX
+}
+
+public enum E_ZombieType : int
+{
+    Run = 0,
+    Walk,
+    MAX
+}
+
+public enum E_SceneNumber : int
+{
+    None = 0,
+    Intro,
+    Menu,
+    Ingame,
+    Exit,
+    MAX
 
 }

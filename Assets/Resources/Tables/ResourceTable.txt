@@ -1,0 +1,14 @@
+﻿{
+    "table": [
+        {
+            "id": 0,
+            "name": "zombie1",
+            "path": "zombie1"
+        },
+        {
+            "id": 1,
+            "name": "zombie1",
+            "path": "zombie1"
+        }
+    ]
+}

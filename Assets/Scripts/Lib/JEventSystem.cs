@@ -5,43 +5,46 @@ using System.Collections.Generic;
 
 public class JEventParam
 {
-    public object       eventName;
-    public GameObject   go;
+    public object       m_oEventName;
+    public int          m_iInstanceID;
 
-    public JEventParam(object eventName, GameObject go)
+    public JEventParam(object oEventName, int iInstanceID)
     {
-        this.eventName  = eventName;
-        this.go         = go;
+        this.m_oEventName   = oEventName;
+        this.m_iInstanceID  = iInstanceID;
     }
+    
 }
 
 
-public class JEventSystem : MonoSingle<JEventSystem>{
-    Dictionary<string , Action<GameObject>>  m_diObservers   = null;
-    Queue<JEventParam>                       m_queEvent      = null;
-    
-    public static void EnqueueEvent(object oEventName, GameObject go)
+public class JEventSystem : MonoSingle<JEventSystem>
+{
+    Dictionary<string , Action<int>>     m_dicObservers_go   = null;
+    Queue<JEventParam>                   m_queEvent          = null;
+
+    public static void EnqueueEvent( object oEventName , int iInstanceID = 0)
     {
-        JEventSystem.Instance.m_queEvent.Enqueue(new JEventParam(oEventName,go));
+
+        JEventSystem.Instance.m_queEvent.Enqueue(new JEventParam(oEventName, iInstanceID));
     }
 
-    public static void AddObserver(object oEventName, Action<GameObject> observer)
+    public static void AddObserver(object oEventName, Action<int> observer)
     {
-        if(JEventSystem.Instance.m_diObservers.ContainsKey(oEventName.ToString()))
+        if(JEventSystem.Instance.m_dicObservers_go.ContainsKey(oEventName.ToString()))
         {
-            JEventSystem.Instance.m_diObservers[oEventName.ToString()] += observer;;
+            JEventSystem.Instance.m_dicObservers_go[oEventName.ToString()] += observer;;
         }
 
         else
         {
-            JEventSystem.Instance.m_diObservers.Add(oEventName.ToString(),observer);
+            JEventSystem.Instance.m_dicObservers_go.Add(oEventName.ToString(),observer);
         }
     }
 
 	// Use this for initialization
 	void Awake () {
-        m_queEvent      = new Queue<JEventParam>();
-        m_diObservers   = new Dictionary<string, Action<GameObject>>();
+        m_queEvent          = new Queue<JEventParam>();
+        m_dicObservers_go   = new Dictionary<string, Action<int>>();
 	}
 	
 	// Update is called once per frame
@@ -50,13 +53,13 @@ public class JEventSystem : MonoSingle<JEventSystem>{
         {
             JEventParam poped = m_queEvent.Dequeue();
 
-            if( m_diObservers.ContainsKey( poped.eventName.ToString() ) )
+            if( m_dicObservers_go.ContainsKey( poped.m_oEventName.ToString() ) )
             {
-                m_diObservers[ poped.eventName.ToString() ]( poped.go );
+                m_dicObservers_go[ poped.m_oEventName.ToString() ]( poped.m_iInstanceID );
             }
             else
             {
-                Debug.LogFormat( "Event : {0} is not exist" , poped.eventName );
+                Debug.LogFormat( "Event : {0} is not exist" , poped.m_oEventName );
             }
         }
     }

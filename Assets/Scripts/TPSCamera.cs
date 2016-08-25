@@ -24,9 +24,9 @@ public class TPSCamera : MonoSingle<TPSCamera> {
     {
         m_tPlayer = GameObject.FindWithTag("Player").transform;
       
-        JEventSystem.AddObserver(E_AnimEvent.Idle, IdlePosObserver);
-        JEventSystem.AddObserver(E_AnimEvent.Run, RunPosObserver);
-        JEventSystem.AddObserver(E_AnimEvent.Walk, WalkPosObserver);
+        JEventSystem.AddObserver(E_UserAnimEvent.Idle, IdlePosObserver);
+        JEventSystem.AddObserver(E_UserAnimEvent.Run, RunPosObserver);
+        JEventSystem.AddObserver(E_UserAnimEvent.Walk, WalkPosObserver);
     }
 	// Update is called once per frame
 	void Update ()
@@ -59,7 +59,7 @@ public class TPSCamera : MonoSingle<TPSCamera> {
         this.transform.LookAt(LookTarget.position + vLookPos);
     }
 
-    public void RunPosObserver(GameObject go)
+    public void RunPosObserver(int iInstanceID)
     {
         if(null != m_Itor)
         {
@@ -70,7 +70,7 @@ public class TPSCamera : MonoSingle<TPSCamera> {
         StartCoroutine(m_Itor);
     }
 
-    public void WalkPosObserver(GameObject go)
+    public void WalkPosObserver(int iInstanceID)
     {
         if(null != m_Itor)
         {
@@ -81,7 +81,7 @@ public class TPSCamera : MonoSingle<TPSCamera> {
         StartCoroutine(m_Itor);
     }
 
-    public void IdlePosObserver(GameObject go)
+    public void IdlePosObserver(int iInstanceID)
     {
         if(null != m_Itor)
         {
