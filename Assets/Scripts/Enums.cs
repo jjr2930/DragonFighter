@@ -94,6 +94,7 @@ public enum E_SceneNumber : int
     Menu,
     Ingame,
     Exit,
+    Loading,
     MAX
 
 }

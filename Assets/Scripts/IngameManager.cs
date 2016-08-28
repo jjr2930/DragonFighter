@@ -39,6 +39,9 @@ public class IngameManager : MonoSingle<IngameManager> {
         {
             goPlayer.AddComponent<JCharacterController>();
         }
+
+        //Add camera component
+        Camera.main.gameObject.AddComponent<TPSCamera>();
         
     }
     

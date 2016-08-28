@@ -15,7 +15,11 @@ public class SaveConfigure
     {
         string json = JsonUtility.ToJson(Configure.Instance,true);
         string filePath = @"Assets/Resources/Tables/Configure.txt";
-        
+
+        //clear file
+        File.WriteAllText(filePath, string.Empty);
+
+        //write data
         using (FileStream fs = File.Open(filePath, FileMode.OpenOrCreate))
         {
             Byte[] toByte = new UTF8Encoding(true).GetBytes(json);

@@ -33,12 +33,12 @@ public class JCharacterController : MonoBehaviour {
     #region key press
     void GetKeyFwd(int iInstanceID)
     {
-        m_CharCtrl.Move(this.transform.forward * Configure.Instance.MOVE_FWD_LIMIT);
+        m_CharCtrl.SimpleMove(this.transform.forward * Configure.Instance.MOVE_FWD_LIMIT);
     }
 
     void GetKeyBack(int iInstanceID)
     {
-        m_CharCtrl.Move(-this.transform.forward * Configure.Instance.MOVE_BACK_LIMIT);
+        m_CharCtrl.SimpleMove(-this.transform.forward * Configure.Instance.MOVE_BACK_LIMIT);
     }
 
     void GetKeyLeft(int iInstanceID)
@@ -58,12 +58,12 @@ public class JCharacterController : MonoBehaviour {
     #region key Up
     void GetKeyUpFwd(int iInstanceID)
     {
-        m_CharCtrl.Move(Vector3.zero);
+        m_CharCtrl.SimpleMove(Vector3.zero);
     }
 
     void GetKeyUpBack(int iInstanceID)
     {
-        m_CharCtrl.Move(Vector3.zero);
+        m_CharCtrl.SimpleMove(Vector3.zero);
     }
     
     void GetKeyUpLeft(int iInstanceID)

@@ -5,9 +5,7 @@ using System.Collections;
 public class Configure : MonoSingle<Configure>
 {
     #region Camera's Configure
-    public Vector3 TPS_CAM_IDLE_POS;
-    public Vector3 TPS_CAM_WALK_POS;
-    public Vector3 TPS_CAM_RUN_POS;
+    public Vector3 TPS_CAM_LOCATION;
     public Vector3 TPS_CAM_LOOKPOS;
     public float TPS_CAM_MOVE_SPEED;
     #endregion
