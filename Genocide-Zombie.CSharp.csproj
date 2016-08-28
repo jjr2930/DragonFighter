@@ -103,6 +103,7 @@
     <Compile Include="Assets\Scripts\UI\IntroDirector.cs" />
     <Compile Include="Assets\Scripts\UI\MenuUIEventListener.cs" />
     <Compile Include="Assets\Scripts\UI\MenuUIEventMaker.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\UserData.cs" />
     <Compile Include="Assets\Scripts\ZombieData.cs" />
     <Compile Include="Assets\Scripts\ZombieEventMaker.cs" />

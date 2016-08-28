@@ -104,9 +104,10 @@ public class Configure : MonoSingle<Configure>
 
     #region SceneName
 
-    public string SCENE_MENU = "Menu";
-    public string SCENE_INGAME = "Ingame";
-    public string SCENE_INTRO = "Intro";
+    public string SCENENAME_MENU = "Menu";
+    public string SCENENAME_INGAME = "Ingame";
+    public string SCENENAME_INTRO = "Intro";
+    public string SCENENAME_UI = "UI";
 
     #endregion
 

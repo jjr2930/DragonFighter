@@ -9,6 +9,11 @@
             "id": 1,
             "name": "zombie1",
             "path": "zombie1"
+        },
+		{
+			"id": 2,
+            "name": "Loading",
+            "path": "Loading"
         }
     ]
 }

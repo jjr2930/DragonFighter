@@ -6,12 +6,12 @@ using System.Collections.Generic;
 public class MenuUIEventListener : MonoBehaviour
 {
     [SerializeField]
-    GameObject m_goRecord = null;
+    GameObject m_goRecord;
 
     [SerializeField]
     Text[] m_txtRecords = null;
     
-    public void Start()
+    public void OnEnable()
     {
         m_txtRecords = m_goRecord.GetComponentsInChildren<Text>();
 

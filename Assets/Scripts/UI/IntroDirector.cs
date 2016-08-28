@@ -59,5 +59,7 @@ public class IntroDirector : MonoBehaviour {
 
             yield return null;
         }
+
+        JEventSystem.EnqueueEvent(E_UIEvent.SceneChange, (int)E_SceneNumber.Menu);
     }
 }

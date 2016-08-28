@@ -57,7 +57,7 @@ public class IngameManager : MonoSingle<IngameManager> {
         switch(eTarget)
         {
             case E_SceneNumber.Menu:
-                SceneManager.LoadSceneAsync(Configure.Instance.SCENE_MENU);
+                SceneManager.LoadSceneAsync(Configure.Instance.SCENENAME_MENU);
                 break;
 
             default:
