@@ -96,10 +96,13 @@
     <Compile Include="Assets\Scripts\TPSCamera.cs" />
     <Compile Include="Assets\Scripts\TableLoader.cs" />
     <Compile Include="Assets\Scripts\TestMover.cs" />
+    <Compile Include="Assets\Scripts\UI\EventMakerBase.cs" />
     <Compile Include="Assets\Scripts\UI\IngamePause.cs" />
     <Compile Include="Assets\Scripts\UI\IngameUIEventMaker.cs" />
     <Compile Include="Assets\Scripts\UI\IngameUIListener.cs" />
     <Compile Include="Assets\Scripts\UI\IntroDirector.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuUIEventListener.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuUIEventMaker.cs" />
     <Compile Include="Assets\Scripts\UserData.cs" />
     <Compile Include="Assets\Scripts\ZombieData.cs" />
     <Compile Include="Assets\Scripts\ZombieEventMaker.cs" />

@@ -97,3 +97,11 @@ public enum E_SceneNumber : int
     MAX
 
 }
+
+public enum E_MenuEvnet : int
+{
+    StartClick,
+    RecordClick,
+    CloseRecordClick,
+    ExitClick,
+}

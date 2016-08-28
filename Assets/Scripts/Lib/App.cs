@@ -44,6 +44,7 @@ public class App : MonoSingle<App>
                 break;
 
             case E_SceneNumber.Exit:
+                Debug.Log("Exit");
                 Application.Quit();
                 break;
         }

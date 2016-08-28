@@ -25,6 +25,17 @@
 			"key": "EXIT",
 			"location": "Korean",
 			"value": "종료"
+		},
+		{
+			"key": "START",
+			"location": "Korean",
+			"value": "시작"
+		},
+		{
+			"key": "RECORD",
+			"location": "Korean",
+			"value": "기록"
 		}
+
 	]
 }
