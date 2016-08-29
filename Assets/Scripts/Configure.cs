@@ -7,7 +7,8 @@ public class Configure : MonoSingle<Configure>
     #region Camera's Configure
     public Vector3 TPS_CAM_LOCATION;
     public Vector3 TPS_CAM_LOOKPOS;
-    public float TPS_CAM_MOVE_SPEED;
+    public float TPS_CAM_ZDISTANCE = 1f;
+    public float TPS_CAM_DURATION =1f;
     #endregion
 
     #region PC Key
@@ -109,6 +110,11 @@ public class Configure : MonoSingle<Configure>
 
     #endregion
 
+    #region Item Position
+
+    public Vector3 WEAPON_ELVEN_POS;
+    public Vector3 WEAPON_ELVEN_ROT;
+    #endregion
     #region TableName Path
     public string PATH_DIFF_TABLE = "Tables/DifficultTable";
     public string PATH_LOCAL_TABLE = "Tables/Localize";

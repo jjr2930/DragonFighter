@@ -18,26 +18,17 @@ public class App : MonoSingle<App>
     static void OnRuntimeMethodLoad()
     {
         App.Initilize();
-        if (Configure.Instance.SCENENAME_INGAME == SceneManager.GetActiveScene().name)
-        {
-            IngameManager im = IngameManager.Instance;
-        }
+    }
+
+    void Awake()
+    {
+        StartCoroutine(LoadAllManagers());
     }
 
     void Start()
     {
-        //initialize configure and tables
-        Configure.Initilize();
-        TableLoader.Initilize();
-        JLocalize.Initialize();
-
-        JEventSystem.AddObserver(E_UIEvent.SceneChange, ListenChangeScene);
-
-
-        ///merge scene
-        string strUISceneName = Configure.Instance.SCENENAME_UI;
-
-        SceneManager.LoadScene(strUISceneName, LoadSceneMode.Additive);
+    
+        
         //JEventSystem.EnqueueEvent(E_UIEvent.SceneChange, (int) E_SceneNumber.Intro);
     }
 
@@ -68,5 +59,26 @@ public class App : MonoSingle<App>
         }
     }
     
-    
+    IEnumerator LoadAllManagers()
+    {
+        Configure.Initilize();
+        yield return null;
+
+        JEventSystem.Initilize();
+        yield return null;
+
+        TableLoader.Initilize();
+        yield return null;
+
+        JLocalize.Initialize();
+        yield return null;
+
+        JEventSystem.AddObserver(E_UIEvent.SceneChange, ListenChangeScene);
+
+
+        ///merge scene
+        string strUISceneName = Configure.Instance.SCENENAME_UI;
+
+        SceneManager.LoadScene(strUISceneName, LoadSceneMode.Additive);
+    }
 }

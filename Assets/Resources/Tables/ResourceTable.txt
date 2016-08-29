@@ -2,18 +2,28 @@
     "table": [
         {
             "id": 0,
-            "name": "zombie1",
-            "path": "zombie1"
+            "name": "Zombie0",
+            "path": "Zombie0"
         },
         {
             "id": 1,
-            "name": "zombie1",
-            "path": "zombie1"
+            "name": "Zombie1",
+            "path": "Zombie1"
         },
 		{
-			"id": 2,
+            "id": 2,
+            "name": "Zombie2",
+            "path": "Zombie2"
+        },
+		{
+			"id": 3,
             "name": "Loading",
             "path": "Loading"
+        },
+		{
+			"id": 4,
+            "name": "Elven_Sword",
+            "path": "Elven_Sword_01"
         }
     ]
 }

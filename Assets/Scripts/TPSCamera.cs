@@ -10,30 +10,57 @@ public class TPSCamera : MonoSingle<TPSCamera> {
     }
 
     [SerializeField] Transform m_tPlayer = null;
-
+    
     float m_fCamMoveDuration = 1f;
 
     IEnumerator m_Itor = null;
+
+    public float StartTime;// { get; set; }
+    public float Duration;// { get; set; }
+    public float LerpTime;
+
+    [SerializeField]
+    Vector3 m_vCamCurPos = Vector3.zero;
+    [SerializeField]
+    Vector3 m_vCamDestPos = Vector3.zero;
+    [SerializeField]
+    Vector3 m_vCamNextPos = Vector3.zero;
+
+    Vector3 m_vCamLookPos = Vector3.zero;
+
+
     // Use this for initialization
     void Start () {
-	}
+        JEventSystem.AddObserver(E_VirtualKey.Left_Down, ListenLeftRightDown);
+        JEventSystem.AddObserver(E_VirtualKey.Right_Down, ListenLeftRightDown);
+    }
 	
 
     void Awake()
     {
         m_tPlayer = GameObject.FindWithTag("Player").transform;
-      
-        //JEventSystem.AddObserver(E_UserAnimEvent.Idle, IdlePosObserver);
-        //JEventSystem.AddObserver(E_UserAnimEvent.Run, RunPosObserver);
-        //JEventSystem.AddObserver(E_UserAnimEvent.Walk, WalkPosObserver);
+        m_vCamCurPos = Camera.main.transform.position;
+        Duration = Configure.Instance.TPS_CAM_DURATION;
     }
 	// Update is called once per frame
 	void Update ()
     {
-        Vector3 camPos = Configure.Instance.TPS_CAM_LOCATION;
-        Vector3 camLookPos = Configure.Instance.TPS_CAM_LOOKPOS;
-        this.transform.position = m_tPlayer.position + camPos;
-        this.transform.LookAt(m_tPlayer.position + camLookPos);
+        m_vCamDestPos = m_tPlayer.position - m_tPlayer.transform.forward * Configure.Instance.TPS_CAM_ZDISTANCE + Configure.Instance.TPS_CAM_LOCATION;
+        m_vCamLookPos = m_tPlayer.position + Configure.Instance.TPS_CAM_LOOKPOS;
+
+        LerpTime = (Time.time - StartTime) / Duration;
+
+        m_vCamNextPos = Vector3.Lerp(m_vCamCurPos, m_vCamDestPos, LerpTime);
+
+        Camera.main.transform.position = m_vCamNextPos;
+        this.transform.LookAt(m_vCamLookPos);
+    }
+
+    public void ListenLeftRightDown(int num)
+    {
+        Debug.Log("TPSCamera ==> Left or Right Down");
+        m_vCamCurPos = Camera.main.transform.position;
+        StartTime = Time.time;
     }
 
     //IEnumerator JobMoveCamPos(E_CamPos ePosition, Transform LookTarget, float fDuration)

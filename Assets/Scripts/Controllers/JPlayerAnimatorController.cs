@@ -56,7 +56,7 @@ public class JPlayerAnimatorController : MonoBehaviour {
 
     void ProcessBackBtn(int iInstanceID)
     {
-        Debug.Log("Back Btn");
+        //Debug.Log("Back Btn");
         if (null != m_Fwditer)
         {
             StopCoroutine(m_Fwditer);
@@ -225,7 +225,6 @@ public class JPlayerAnimatorController : MonoBehaviour {
         Debug.Log("CreateAttackEvent called");
         int dmg = UserData.Instance.TotalDmg + iAddDmg;
         JEventSystem.EnqueueEvent(E_UserAnimEvent.Attack, dmg);
-        
     }
     
 }

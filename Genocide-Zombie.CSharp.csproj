@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Controllers\JPlayerAnimatorController.cs" />
     <Compile Include="Assets\Scripts\Controllers\ZombieAnimatorController.cs" />
     <Compile Include="Assets\Scripts\Enums.cs" />
+    <Compile Include="Assets\Scripts\Hand.cs" />
     <Compile Include="Assets\Scripts\IngameManager.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\Lib\App.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="Assets\Scripts\ZombieSpawnManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Art\Model\Elven_Sword\ReadMe.txt" />
     <None Include="Assets\Resources\Tables\Configure.txt" />
     <None Include="Assets\Resources\Tables\DifficultTable.txt" />
     <None Include="Assets\Resources\Tables\Localize.txt" />

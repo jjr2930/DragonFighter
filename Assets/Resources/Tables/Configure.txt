@@ -1,21 +1,22 @@
 {
     "TPS_CAM_LOCATION": {
         "x": 0.0,
-        "y": 3.4700000286102297,
-        "z": -2.569999933242798
+        "y": 3.309999942779541,
+        "z": 0.0
     },
     "TPS_CAM_LOOKPOS": {
         "x": 0.0,
-        "y": 1.25,
+        "y": 1.600000023841858,
         "z": 0.0
     },
-    "TPS_CAM_MOVE_SPEED": 0.0,
+    "TPS_CAM_ZDISTANCE": 2.509999990463257,
+    "TPS_CAM_DURATION": 1.0,
     "FWD_KEY": 273,
     "LEFT_KEY": 276,
     "BACK_KEY": 274,
     "RIGHT_KEY": 275,
-    "KEY_A": 97,
-    "KEY_B": 98,
+    "KEY_A": 122,
+    "KEY_B": 120,
     "LEVER_SLEEP": 11.699999809265137,
     "ANIM_FWD_ACCEL": 5.0,
     "ANIM_BACK_ACCEL": 5.0,
@@ -26,12 +27,12 @@
     "ANIM_STOP_SPEED_ACCEL": 2.0,
     "ANIM_USER_FORWARD": "Forward",
     "ANIM_USER_STRAFE": "Right",
-    "ANIM_USER_BtnA": "BtnA",
-    "ANIM_USER_BtnB": "BtnB",
-    "MOVE_FWD_LIMIT": 0.10000000149011612,
-    "MOVE_BACK_LIMIT": 0.03500000014901161,
-    "MOVE_STRAFE_LIMIT": 0.10000000149011612,
-    "MOVE_ROT_SPEED": 180.0,
+    "ANIM_USER_BtnA": "ButtonA",
+    "ANIM_USER_BtnB": "ButtonB",
+    "MOVE_FWD_LIMIT": 4.5,
+    "MOVE_BACK_LIMIT": 2.0,
+    "MOVE_STRAFE_LIMIT": 1.0,
+    "MOVE_ROT_SPEED": 120.0,
     "PLAYER_ATTACK_RANGE": 1.0,
     "ANIM_ZOMBIE_IDLE": "Idle",
     "ANIM_ZOMBIE_WALK": "Walk",
@@ -55,6 +56,16 @@
     "SCENENAME_INGAME": "Ingame",
     "SCENENAME_INTRO": "Intro",
     "SCENENAME_UI": "UI",
+    "WEAPON_ELVEN_POS": {
+        "x": 0.004999999888241291,
+        "y": 0.07500000298023224,
+        "z": 0.03200000151991844
+    },
+    "WEAPON_ELVEN_ROT": {
+        "x": -208.81199645996095,
+        "y": -13.877010345458985,
+        "z": 103.27300262451172
+    },
     "PATH_DIFF_TABLE": "Tables/DifficultTable",
     "PATH_LOCAL_TABLE": "Tables/Localize",
     "PATH_RESC_TABLE": "Tables/ResourceTable"

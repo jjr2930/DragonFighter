@@ -120,6 +120,7 @@
     <Compile Include="Assets\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Art\Model\Elven_Sword\ReadMe.txt" />
     <None Include="Assets\Resources\Tables\Configure.txt" />
     <None Include="Assets\Resources\Tables\DifficultTable.txt" />
     <None Include="Assets\Resources\Tables\Localize.txt" />

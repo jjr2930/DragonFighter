@@ -8,7 +8,7 @@ public class IngameManager : MonoSingle<IngameManager> {
     MonoBehaviour m_inputInstance = null;
     MonoBehaviour m_eventContainer =null;
     // Use this for initialization
-    void Awake() {
+    void OnEnable() {
         if( Application.platform == RuntimePlatform.WindowsPlayer 
             || Application.platform == RuntimePlatform.WindowsEditor
             || Application.platform == RuntimePlatform.WindowsWebPlayer)
@@ -40,8 +40,25 @@ public class IngameManager : MonoSingle<IngameManager> {
             goPlayer.AddComponent<JCharacterController>();
         }
 
+
+        //findHand
+        Transform hand = GameObject.FindObjectOfType<Hand>().transform;
+
+        //Instnaitate sword
+        Vector3     vSwordPos       = Configure.Instance.WEAPON_ELVEN_POS;
+        Quaternion  qSwordRot       = Quaternion.Euler(Configure.Instance.WEAPON_ELVEN_ROT);
+        string      strSwordPath    = TableLoader.GetResourcePath("Elven_Sword");
+        Object      oSword          = JResources.Load(strSwordPath);
+        GameObject  goSword         = JResources.Instantiate(oSword, Vector3.zero, Quaternion.identity) as GameObject;
+
+        //attach sword to hand
+        goSword.transform.parent        = hand;
+        goSword.transform.localPosition = vSwordPos;
+        goSword.transform.localRotation = qSwordRot;
+
         //Add camera component
         Camera.main.gameObject.AddComponent<TPSCamera>();
+        
         
     }
     
