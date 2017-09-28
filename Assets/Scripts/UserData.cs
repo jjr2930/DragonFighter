@@ -2,7 +2,7 @@
 using System.Collections;
 
 [SerializeField]
-public class UserData : Singletone<UserData>
+public class UserData : JLib.Singleton<UserData>
 {
     [SerializeField]
     int m_iBaseDmg = 0;

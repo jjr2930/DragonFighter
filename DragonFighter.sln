@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio for Mac
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonFighter.Plugins", "DragonFighter.Plugins.csproj", "{6C722F0B-E832-8339-3397-678CDDD9574D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonFighter", "DragonFighter.csproj", "{0E2B7F7F-90DF-C46C-FA7E-6B819317C4FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonFighter.Editor", "DragonFighter.Editor.csproj", "{E956E089-957A-A786-E251-7CAEE25AADA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonFighter.Editor.Plugins", "DragonFighter.Editor.Plugins.csproj", "{7DFF1659-E7BF-3C3F-3910-1CB7418EA147}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C722F0B-E832-8339-3397-678CDDD9574D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C722F0B-E832-8339-3397-678CDDD9574D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C722F0B-E832-8339-3397-678CDDD9574D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C722F0B-E832-8339-3397-678CDDD9574D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E2B7F7F-90DF-C46C-FA7E-6B819317C4FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E2B7F7F-90DF-C46C-FA7E-6B819317C4FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E2B7F7F-90DF-C46C-FA7E-6B819317C4FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E2B7F7F-90DF-C46C-FA7E-6B819317C4FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E956E089-957A-A786-E251-7CAEE25AADA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E956E089-957A-A786-E251-7CAEE25AADA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E956E089-957A-A786-E251-7CAEE25AADA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E956E089-957A-A786-E251-7CAEE25AADA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DFF1659-E7BF-3C3F-3910-1CB7418EA147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DFF1659-E7BF-3C3F-3910-1CB7418EA147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DFF1659-E7BF-3C3F-3910-1CB7418EA147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DFF1659-E7BF-3C3F-3910-1CB7418EA147}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
