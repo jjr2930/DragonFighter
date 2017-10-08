@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio for Mac
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonFighter.Plugins", "DragonFighter.Plugins.csproj", "{6C722F0B-E832-8339-3397-678CDDD9574D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonFighter", "DragonFighter.csproj", "{0E2B7F7F-90DF-C46C-FA7E-6B819317C4FA}"

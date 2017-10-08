@@ -1,0 +1,13 @@
+ManifestFileVersion: 0
+CRC: 1096058504
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: zombie_3107b56c7b47b8569aaf055c77b6b7c7
+      Dependencies: {}
+    Info_1:
+      Name: player_e588001b685315fa42445752c9cc48f6
+      Dependencies: {}
+    Info_2:
+      Name: scene_6138e6b10f2fe763d9bfde6545592784
+      Dependencies: {}

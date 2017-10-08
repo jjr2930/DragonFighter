@@ -1,23 +1,22 @@
-﻿<Properties StartupConfiguration="{0E2B7F7F-90DF-C46C-FA7E-6B819317C4FA}|">
+﻿<Properties StartupConfiguration="{0E2B7F7F-90DF-C46C-FA7E-6B819317C4FA}|" StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.ItemProperties.DragonFighter PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerAIController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ZombieAIController.cs">
     <Files>
-      <File FileName="Assets/Scripts/SMB/PlayerAttackSMB.cs" Line="24" Column="67" />
-      <File FileName="Assets/Scripts/SMB/CreatePlayerSMB.cs" Line="38" Column="34" />
-      <File FileName="Assets/Scripts/PlayerAIController.cs" Line="7" Column="101" />
-      <File FileName="Assets/Plugins/JYScripts/CustomUnityEvent.cs" Line="6" Column="14" />
-      <File FileName="Assets/Scripts/MousePicking.cs" Line="42" Column="37" />
-      <File FileName="Assets/Scripts/INGAMECONST.cs" Line="19" Column="25" />
-      <File FileName="Assets/Scripts/SMB/PlayerMoveSMB.cs" Line="34" Column="15" />
-      <File FileName="Assets/Scripts/TestMover.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Controllers/PlayerAnimatorController.cs" Line="52" Column="39" />
-      <File FileName="Assets/Scripts/MonsterData.cs" Line="9" Column="5" />
-      <File FileName="Assets/Scripts/MonsterAIController.cs" Line="11" Column="6" />
-      <File FileName="Assets/Scripts/SMB/PlayCinemaSMB.cs" Line="25" Column="6" />
-      <File FileName="Assets/Scripts/SMB/ResetTriggerSMB.cs" Line="17" Column="56" />
+      <File FileName="Assets\Scripts\SMB\CreatePlayerSMB.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerAIController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Plugins\JYScripts\CustomUnityEvent.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MousePicking.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\INGAMECONST.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TestMover.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Controllers\PlayerAnimatorController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MonsterData.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MonsterAIController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SMB\PlayCinemaSMB.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SMB\ResetTriggerSMB.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ZombieAIController.cs" Line="7" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

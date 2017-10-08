@@ -27,12 +27,13 @@ public class MousePicking : MonoBehaviour
 				if (Physics.Raycast(ray, out hit, float.MaxValue, layer.value))
 				{
 					Debug.Log("Mouse Pick complete");
-					OnPicking.Invoke(hit.point);
+		            OnPicking_Transform.Invoke(hit.transform);			
+                    OnPicking_RaycastHit.Invoke(hit);                    
 				}
 			}
 		}
 #else
-        if(Input.GetButtonDown("Fire1"))
+        if ( Input.GetButtonDown("Fire1"))
         {
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast(ray, out hit, float.MaxValue, layer.value))

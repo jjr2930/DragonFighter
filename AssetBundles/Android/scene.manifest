@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2564049508
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6138e6b10f2fe763d9bfde6545592784
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 31d6cfe0d16ae931b73c59d7e0c089c0
+HashAppended: 1
+ClassTypes: []
+Assets:
+- Assets/Scene/Ingame.unity
+- Assets/Scene/Intro.unity
+- Assets/Scene/Menu.unity
+Dependencies: []
