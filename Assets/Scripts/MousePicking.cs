@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using AssetBundles;
 public class MousePicking : MonoBehaviour
 {
     [SerializeField]
@@ -26,7 +26,7 @@ public class MousePicking : MonoBehaviour
 				ray = Camera.main.ScreenPointToRay(touch.position);
 				if (Physics.Raycast(ray, out hit, float.MaxValue, layer.value))
 				{
-					Debug.Log("Mouse Pick complete");
+					//Debug.Log("Mouse Pick complete");
 		            OnPicking_Transform.Invoke(hit.transform);			
                     OnPicking_RaycastHit.Invoke(hit);                    
 				}
@@ -38,11 +38,19 @@ public class MousePicking : MonoBehaviour
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast(ray, out hit, float.MaxValue, layer.value))
 			{
-				Debug.Log("Mouse Pick complete");
+				//Debug.Log("Mouse Pick complete");
                 OnPicking_Transform.Invoke(hit.transform);
                 OnPicking_RaycastHit.Invoke(hit);
 			}
         }
 #endif
     }
+
+    public void CreateMovePoint( RaycastHit hitInfo)
+    {
+        JLib.JPoolObject foundedObj = JLib.JObjectPool.Instance.GetPoolObject( JLib.JPoolKey.MovePoint );
+        foundedObj.transform.position = hitInfo.point + Vector3.up * 0.01f;
+        foundedObj.transform.rotation = Quaternion.LookRotation( -hitInfo.normal );
+    }
+
 }

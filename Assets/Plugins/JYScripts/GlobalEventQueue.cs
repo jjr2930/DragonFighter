@@ -1,12 +1,16 @@
 using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
 using System;
-using ListenerDictionary = System.Collections.Generic.Dictionary<System.Enum, System.Action<System.Object>>;
+//so dirty...... how to make simple
+using ListenerDictionary = System.Collections.Generic.Dictionary<System.Enum, System.Collections.Generic.List<UnityEngine.Events.UnityEvent<System.Object>>>;
 namespace JLib
 {
     public static class GlobalEventQueue
     {
+        public const long GLOBAL_ID = long.MinValue;
+
         static Dictionary<long, ListenerDictionary> listeners = new Dictionary<long, ListenerDictionary>();
 
         public static void SendEvent(long id, System.Enum eventName, System.Object param)
@@ -29,17 +33,31 @@ namespace JLib
 				return;
             }
 
-            listeners[id][eventName]( param );
+            for ( int i = 0 ; i < listeners[ id ][ eventName ].Count ;  i++)
+            {
+                listeners[ id ][ eventName ][i].Invoke( param );    
+            }
+
         }
 
-        public static void AddListener(long id, Enum eventName, Action<object> listener)
+        public static void AddListener(long id, Enum eventName, UnityEvent<object> listener)
         {
-            listeners[id][eventName] += listener;
+            if ( !listeners.ContainsKey( id ) )
+            {
+                listeners.Add( id , new ListenerDictionary() );
+            }
+
+            if ( !listeners[ id ].ContainsKey( eventName ) )
+            {
+                listeners[ id ].Add( eventName , new List<UnityEvent<object>>() );
+            }
+
+            listeners[ id ][ eventName ].Add( listener );
         }
 
-        public static void RemoveListener(long id, Enum eventName, Action<object> listener)
+        public static void RemoveListener(long id, Enum eventName, UnityEvent<object> listener)
         {
-            listeners[id][eventName] -= listener;
+            listeners[ id ][ eventName ].Remove( listener );
         }
     }
 }

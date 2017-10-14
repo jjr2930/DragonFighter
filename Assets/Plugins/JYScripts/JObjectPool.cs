@@ -1,19 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using AssetBundles;
 namespace JLib
 {
     /// <summary>
     /// 싱글톤으로 만들거임
     /// </summary>
-    public class JObjectPool : MonoBehaviour
+    public class JObjectPool : Singleton<JObjectPool>
     {
         public List<PoolData> data = new List<PoolData>();
         //사용중이지 않은 것들의 목록
-        Dictionary<PoolKey, List<JPoolObject>> sleepedObjects = new Dictionary<PoolKey, List<JPoolObject>>();
+        Dictionary<JPoolKey, List<JPoolObject>> sleepedObjects = new Dictionary<JPoolKey, List<JPoolObject>>();
 
-        public void Awake()
+        public IEnumerator Start()
         {
             for (int i = 0; i < data.Count; i++)
             {
@@ -23,12 +23,19 @@ namespace JLib
                 }
                 for (int j = 0; j < data[i].howMuch; j++)
                 {
-                    Object loadedObj = Resources.Load( data[i].path );
-                    GameObject instanceGO = Instantiate( loadedObj ) as GameObject;
+                    string strBundleName = data[ i ].m_strBundleName;
+                    string strAssetName = data[ i ].m_strAssetName;
+
+                    AssetBundleLoadAssetOperation operation = AssetBundleManager.LoadAssetAsync(strBundleName,strAssetName,typeof(GameObject));
+                    while ( !operation.IsDone() )
+                    { yield return null; }
+
+                    GameObject goLoadedObj = operation.GetAsset<GameObject>();
+                    GameObject instanceGO = Instantiate( goLoadedObj ) as GameObject;
                     JPoolObject poolObject = instanceGO.GetComponent<JPoolObject>();
                     if (null == poolObject) //애러 표시
                     {
-                        Debug.LogErrorFormat( "{0} does not have JPoolObject component", data[i].path );
+                        Debug.LogErrorFormat( "{0} does not have JPoolObject component", data[i].m_strAssetName );
                         continue;
                     }
 
@@ -37,49 +44,53 @@ namespace JLib
                         sleepedObjects[data[i].key] = new List<JPoolObject>();
                     }
 
+                    poolObject.transform.parent = transform;
+                    poolObject.transform.localPosition = Vector3.zero;
                     sleepedObjects[data[i].key].Add( poolObject );
                 }
             }
         }
 
-        public T GetPoolObject<T>(PoolKey key) where T : Component
+        public T GetPoolObject<T>(JPoolKey key) where T : Component
         {
-            JPoolObject foundedObj = null;
-            T component = null;
+            JPoolObject foundedObj = GetPoolObject( key );
 
-            if (TryGetHaveSleepObject( key, out foundedObj ))
-            {
-                component = foundedObj.GetComponent<T>();
-                if (null == component)
-                {
-                    Debug.LogErrorFormat( "JObjectPool.GetPoolObject=> component is not founded type : {0}, prefabName : {1}",
-                        typeof( T ).ToString(), foundedObj.name );
-                    return null;
-                }
-            }
+            T component = foundedObj.GetComponent<T>();
 
-            sleepedObjects[key].Remove( foundedObj );
             return component;
         }
 
-        public JPoolObject GetPoolObject(PoolKey key)
+        public JPoolObject GetPoolObject(JPoolKey key)
         {
             JPoolObject foundedObj = null;
             if (TryGetHaveSleepObject( key, out foundedObj ))
             {
+				sleepedObjects[ key ].Remove( foundedObj );
+                foundedObj.gameObject.SetActive( true );
+                foundedObj.transform.parent = null;
                 return foundedObj;
             }
+
             //error, error message is already printed by TryGetHaveSleepObject method
             return null;
         }
 
-        public void ReturnToPool(PoolKey key, JPoolObject poolObject)
+        public void ReturnToPool(JPoolKey key, JPoolObject poolObject)
         {
             poolObject.OnIntoPool();
+
+            //Test code
+            if(!sleepedObjects.ContainsKey(key))
+            {
+                sleepedObjects.Add( key , new List<JPoolObject>() );
+            }
+            //end Test code
+            poolObject.transform.parent = transform;
+            poolObject.transform.localPosition = Vector3.zero;
             sleepedObjects[key].Add( poolObject );
         }
 
-        public bool TryGetHaveSleepObject(PoolKey key, out JPoolObject outValue)
+        public bool TryGetHaveSleepObject(JPoolKey key, out JPoolObject outValue)
         {
             if (!sleepedObjects.ContainsKey( key ))
             {
@@ -106,11 +117,14 @@ namespace JLib
     [System.Serializable]
     public class PoolData
     {
-        public PoolKey key;
+        public JPoolKey key;
         /// <summary>
         /// 만들 것 프리팹의 이름
         /// </summary>
-        public string path;
+        public string m_strBundleName;
+
+        public string m_strAssetName;
+
         /// <summary>
         /// 얼만큼 미리 만들거야?
         /// </summary>

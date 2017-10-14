@@ -7,6 +7,7 @@ namespace JLib
     public enum LocalizeKey
     {
         None,
+        SurviveFromTheZombie,
         GameStart,
         Developer,
         Exit,

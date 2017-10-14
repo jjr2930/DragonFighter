@@ -1,0 +1,56 @@
+ManifestFileVersion: 0
+CRC: 269340233
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c4bbddc9aa00d43d4226a78060d74125
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 303f7d1d8deb47e5f851eff78f200e5a
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: f8f70351dfdb83049a25529b878c0e55, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a1799691b91134254805c61e6611387c, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a3f290643091847418af6838453e2746, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4f9a071792011354e9b49a2155c2cb25, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 8e5177f82efc83341b2278656a03d638, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: eabda13d19b133044bd3682e31414f7b, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 195
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/Prefabs/Zombie2.prefab
+- Assets/Resources/Prefabs/Zombie0.prefab
+- Assets/Resources/Prefabs/Zombie1.prefab
+Dependencies: []

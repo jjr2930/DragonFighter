@@ -24,7 +24,7 @@ public class PlayerMoveSMB : StateMachineBehaviour {
         }
 
 		m_navAgent.stoppingDistance = m_fStopDistance;
-		m_navAgent.SetDestination(m_aiController.MovePoint.point);
+		m_navAgent.SetDestination(m_aiController.TargetRaycastHit.point);
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

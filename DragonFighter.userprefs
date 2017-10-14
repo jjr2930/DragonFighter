@@ -1,25 +1,49 @@
-﻿<Properties StartupConfiguration="{0E2B7F7F-90DF-C46C-FA7E-6B819317C4FA}|" StartupItem="Assembly-CSharp.csproj">
+﻿<Properties StartupConfiguration="{0E2B7F7F-90DF-C46C-FA7E-6B819317C4FA}|">
   <MonoDevelop.Ide.ItemProperties.DragonFighter PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ZombieAIController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controllers/HpBarController.cs">
     <Files>
-      <File FileName="Assets\Scripts\SMB\CreatePlayerSMB.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerAIController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Plugins\JYScripts\CustomUnityEvent.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MousePicking.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\INGAMECONST.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TestMover.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Controllers\PlayerAnimatorController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MonsterData.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MonsterAIController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SMB\PlayCinemaSMB.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SMB\ResetTriggerSMB.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ZombieAIController.cs" Line="7" Column="10" />
+      <File FileName="Assets/Scripts/Controllers/PlayerAIController.cs" Line="83" Column="7" />
+      <File FileName="Assets/Plugins/JYScripts/AnimatorParamExtension.cs" Line="8" Column="54" />
+      <File FileName="Assets/Scripts/INGAMECONST.cs" Line="19" Column="71" />
+      <File FileName="Assets/Scripts/Controllers/PlayerAnimatorController.cs" Line="76" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/ZombieAIController.cs" Line="40" Column="6" />
+      <File FileName="Assets/Plugins/JYScripts/UGUI Extension/Tweens/TweenFilled.cs" Line="41" Column="13" />
+      <File FileName="Assets/Plugins/JYScripts/UGUI Extension/Tweens/TweenBase.cs" Line="103" Column="80" />
+      <File FileName="Assets/Scripts/SMB/EnterCinemaSMB.cs" Line="24" Column="6" />
+      <File FileName="Assets/Scripts/Notice.cs" Line="34" Column="52" />
+      <File FileName="Assets/Scripts/ZombieSpawner.cs" Line="37" Column="28" />
+      <File FileName="Assets/Scripts/SMB/Player/PlayerMoveSMB.cs" Line="25" Column="9" />
+      <File FileName="Assets/Scripts/SMB/Monster/ZombieAttackSMB.cs" Line="28" Column="9" />
+      <File FileName="Assets/Scripts/Controllers/MonsterAIController.cs" Line="29" Column="3" />
+      <File FileName="Assets/Scripts/Enums.cs" Line="4" Column="13" />
+      <File FileName="Assets/Scripts/MousePicking.cs" Line="39" Column="28" />
+      <File FileName="Assets/Scripts/SMB/CreatePlayerSMB.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/JMonoBehaviour.cs" Line="12" Column="14" />
+      <File FileName="Assets/Plugins/JYScripts/CustomUnityEvent.cs" Line="6" Column="57" />
+      <File FileName="Assets/Scripts/TestEventCreator.cs" Line="5" Column="2" />
+      <File FileName="Assets/Plugins/DesignPattern/Singleton.cs" Line="7" Column="18" />
+      <File FileName="Assets/Plugins/JYScripts/UGUI Extension/LocalizeKey.cs" Line="10" Column="30" />
+      <File FileName="Assets/Plugins/JYScripts/UGUI Extension/LocalizeTable.cs" Line="77" Column="94" />
+      <File FileName="Assets/Plugins/JYScripts/3DTween/TweenScale3D.cs" Line="12" Column="9" />
+      <File FileName="Assets/Plugins/JYScripts/GameObjectPool.cs" Line="6" Column="5" />
+      <File FileName="Assets/Plugins/JYScripts/JPoolKey.cs" Line="9" Column="19" />
+      <File FileName="Assets/Plugins/JYScripts/JPoolObject.cs" Line="8" Column="18" />
+      <File FileName="Assets/Plugins/JYScripts/JObjectPoolDefault.cs" Line="16" Column="24" />
+      <File FileName="Assets/Scripts/HPBar.cs" Line="54" Column="1" />
+      <File FileName="Assets/Plugins/JYScripts/UGUI Extension/LocalizeTextComponent.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/JYScripts/QuaterViewCamera.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controllers/HpBarController.cs" Line="6" Column="2" />
+      <File FileName="Assets/Plugins/JYScripts/GlobalEventQueue.cs" Line="20" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/EventParameters.cs" Line="21" Column="35" NotebookId="1" />
+      <File FileName="Assets/Plugins/JYScripts/CONST.cs" Line="6" Column="25" NotebookId="1" />
+      <File FileName="Assets/Plugins/JYScripts/JObjectPool.cs" Line="79" Column="10" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.DragonFighter.Editor PreferredExecutionTarget="Unity.Editor" />
 </Properties>

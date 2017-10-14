@@ -12,7 +12,7 @@ public class ZombieWanderSMB : StateMachineBehaviour
     public override void OnStateEnter( Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex )
     {
         m_navAgent = animator.GetComponentInParent<NavMeshAgent>();
-        m_zombieAIController = animator.GetComponentInChildren<ZombieAIController>();
+        m_zombieAIController = animator.GetComponentInParent<ZombieAIController>();
 
         m_navAgent.SetDestination( m_zombieAIController.TargetHitInfo.point );
     }
