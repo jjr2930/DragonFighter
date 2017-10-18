@@ -39,6 +39,14 @@ public class CreatePlayerSMB : StateMachineBehaviour {
 
             int enterCinemaHash = INGAMECONST.AnimatorHash.ENTER_CINEMA;
             animator.SetTrigger(enterCinemaHash);
+
+
+            IngameEventParameters.HPParameter eventParameter = new IngameEventParameters.HPParameter();
+            eventParameter.m_lMaxHP = 100;
+            eventParameter.m_lCurrentHP = 100;
+            eventParameter.m_tOwnerTransform = instanceGo.transform;
+
+            JLib.GlobalEventQueue.SendEvent(JLib.GlobalEventQueue.GLOBAL_ID, IngameEventName.CreateHPBar, eventParameter);
         }
     }
 }

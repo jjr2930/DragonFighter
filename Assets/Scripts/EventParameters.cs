@@ -16,18 +16,10 @@ namespace IngameEventParameters
 
 
     /// <summary>
-    /// Change hp event parameter
+    /// if monster or player was created, it will be created 
+    /// or hp is changed,
     /// </summary>
-    public class ChangeHPParameter
-    {
-        public long m_lMaxHP;
-        public long m_lCurrentHP;
-    }
-
-    /// <summary>
-    /// if monster or player was created, it will be created
-    /// </summary>
-    public class CreateHPBarParameter
+    public class HPParameter
     {
         public Transform m_tOwnerTransform;
         public long m_lMaxHP;

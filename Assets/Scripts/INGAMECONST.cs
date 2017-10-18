@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public static class INGAMECONST 
+public static class INGAMECONST
 {
     public static class BundleName
     {
@@ -24,7 +24,7 @@ public static class INGAMECONST
         {
             //int index = Random.Range(0,3);
             int index = 0;
-            switch(index)
+            switch ( index )
             {
                 case 0:
                     return AssetName.ASSET_NAME_ZOMBIE1_PREFAB;
@@ -35,7 +35,7 @@ public static class INGAMECONST
                 case 2:
                     return AssetName.ASSET_NAME_ZOMBIE3_PREFAB;
             }
-            Debug.LogErrorFormat( "{0} is not supported yet", index );
+            Debug.LogErrorFormat( "{0} is not supported yet" , index );
             return null;
         }
     }
@@ -75,12 +75,18 @@ public static class INGAMECONST
         public const string MONSTER = "Monster";
         public const string PLAYER = "Player";
     }
-    
-    
+
+
     public static class ZombieConst
     {
         public const float ZOMBIE_SPAWN_MIN_TIME = 1f;
         public const float ZOMBIE_SPAWN_MAX_TIME = 5f;
         public const float ZOMBIE_ATTACK_RANGE = 1.5f;
+        public const int ZOMBIE_MAX_HP = 100;
+    }
+
+    public static class SpecialObjectConst
+    {
+        public const string HP_SPAWN_POINT_NAME = "HPBarPoint";
     }
 }

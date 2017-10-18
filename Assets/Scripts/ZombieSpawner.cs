@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.AI;
 using UnityEngine;
 using AssetBundles;
+using IngameEventParameters;
 
 public class ZombieSpawner : MonoBehaviour {
     [SerializeField]
@@ -63,6 +64,15 @@ public class ZombieSpawner : MonoBehaviour {
             NavMeshAgent agent = m_goZombie.GetComponent<NavMeshAgent>();
             agent.enabled = false;
             agent.enabled = true;
+
+
+            //create hp bar
+            HPParameter hpParameter = new HPParameter();
+            hpParameter.m_tOwnerTransform = m_goZombie.transform;
+            hpParameter.m_lMaxHP = INGAMECONST.ZombieConst.ZOMBIE_MAX_HP;
+            hpParameter.m_lCurrentHP = INGAMECONST.ZombieConst.ZOMBIE_MAX_HP;
+
+            JLib.GlobalEventQueue.SendEvent(JLib.GlobalEventQueue.GLOBAL_ID, IngameEventName.CreateHPBar, hpParameter);
         }
     }
 }

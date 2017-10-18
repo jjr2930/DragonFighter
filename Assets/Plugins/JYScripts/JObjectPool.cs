@@ -47,6 +47,9 @@ namespace JLib
                     poolObject.transform.parent = transform;
                     poolObject.transform.localPosition = Vector3.zero;
                     sleepedObjects[data[i].key].Add( poolObject );
+
+                    //active false
+                    poolObject.gameObject.SetActive( false );
                 }
             }
         }

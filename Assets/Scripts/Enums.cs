@@ -21,4 +21,9 @@ public enum IngameEventName
     /// </summary>
     HPChange,
 
+    /// <summary>
+    /// it use HPParameter
+    /// </summary>
+    CreateHPBar,
+
 }

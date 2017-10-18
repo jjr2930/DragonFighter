@@ -3,67 +3,71 @@ using System.Collections;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using IngameEventParameters;
+
 [UnityEngine.RequireComponent( typeof( Slider ) )]
-public class HPBar : MonoBehaviour
+public class HPBar : JLib.JPoolObject
 {
+    /// <summary>
+    /// for debuging in editor
+    /// </summary>
     [SerializeField]
-    long m_lId = 0L;
+    Transform m_tOwner;
 
     [SerializeField]
     Slider m_slider = null;
 
+    [SerializeField]
+    Text m_txt = null;
+
     bool m_bisAppQuit = false;
 
-    UnityEvent<object> m_hpEvent;
-    public long Id{
-        get{
-            return m_lId;
+    Camera m_mainCamera = null;
+
+    Transform m_tHPSpawnPoint = null;
+
+    public Transform Owner
+    {
+        set
+        {
+            m_tOwner = value;
+            m_tHPSpawnPoint = m_tOwner.Find( INGAMECONST.SpecialObjectConst.HP_SPAWN_POINT_NAME );
+        }
+    }
+
+    public string Text
+    {
+        get
+        {
+            return m_txt.text;
         }
 
         set
         {
-            if(value == long.MinValue)
-            {
-                Debug.LogErrorFormat( "id can not be long.Min({0})" , long.MinValue );
-                return;
-            }
-
-            m_lId = value;
+            m_txt.text = value;
         }
     }
 
-    protected void Awake()
+    public float Percent
     {
-        m_slider = GetComponent<Slider>();
-        m_hpEvent.AddListener( HPChange );
-    }
-
-    private void OnDestroy()
-    {
-        if ( !m_bisAppQuit )
+        get
         {
-            JLib.GlobalEventQueue.AddListener( m_lId , IngameEventName.HPChange , m_hpEvent );
+            return m_slider.value;
         }
-    }
 
-    private void OnApplicationQuit()
-    {
-        m_bisAppQuit = true;
-    }
-
-    public void HPChange(long m_)
-    {
-        ChangeHPParameter hpParameter = param as ChangeHPParameter;
-
-        if(hpParameter.m_lMaxHP == 0)
+        set
         {
-            Debug.LogErrorFormat("Max hp is not be 0");
-            return;
+            m_slider.value = value;
         }
-        float fCurrentHP = hpParameter.m_lCurrentHP;
-        float fMaxHP = hpParameter.m_lMaxHP;
-        m_slider.value = fCurrentHP / fMaxHP;
     }
 
+    public void OnEnable()
+    {
+        m_mainCamera = Camera.main;
+    }
 
+    public void Update()
+    {
+        Vector2 vTargetScreenPosition = m_mainCamera.WorldToScreenPoint( m_tHPSpawnPoint.position );
+        this.transform.position = vTargetScreenPosition;
+    }
 }

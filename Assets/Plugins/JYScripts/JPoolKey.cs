@@ -7,5 +7,6 @@ namespace JLib
     {
         None,
         MovePoint,
+        HPBar,
     }
 }

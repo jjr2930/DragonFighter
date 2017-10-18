@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 namespace JLib
 {
+    [System.Serializable]
     public class JPoolObject : MonoBehaviour
     {
         /// <summary>
@@ -12,13 +13,13 @@ namespace JLib
         /// 권장사항 : 자기자신 GameObject가 가진 함수만 등록하자
         /// </summary>
         [SerializeField]
-        UnityAction onIntoPool = null;
+        UnityEvent onIntoPool = null;
         /// <summary>
         /// 풀에 들어갈 때 할일을 정의한다.
         /// </summary>
         public virtual void OnIntoPool()
         {
-            onIntoPool();
+            onIntoPool.Invoke();
         }
     }
 }
